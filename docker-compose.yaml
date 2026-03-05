@@ -1,0 +1,40 @@
+services:
+
+  database:
+    image: postgres:16.6
+    environment:
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_USER=root
+      - POSTGRES_DB=lportal
+
+  liferay:
+    image: liferay/dxp:7.4.13.nightly-d10.0.4-20260220082957
+    environment:
+      - LIFERAY_JVM_OPTS=-Xms3g -Xmx4g
+      - LIFERAY_JPDA_ENABLED=true
+      - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_DRIVER_UPPERCASEC_LASS_UPPERCASEN_AME=org.postgresql.Driver
+      - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_URL=jdbc:postgresql://database:5432/lportal?characterEncoding=utf8&dontTrackOpenResources=true&holdResultsOpenOverStatementClose=true&serverTimezone=GMT&useFastDateParsing=false&useUnicode=true
+      - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_USERNAME=root
+      - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_PASSWORD=root
+      - LIFERAY_MODULE_PERIOD_FRAMEWORK_PERIOD_PROPERTIES_PERIOD_OSGI_PERIOD_CONSOLE=0.0.0.0:11311
+      - LIFERAY_RETRY_PERIOD_JDBC_PERIOD_ON_PERIOD_STARTUP_PERIOD_DELAY=20
+      - LIFERAY_RETRY_PERIOD_JDBC_PERIOD_ON_PERIOD_STARTUP_PERIOD_MAX_PERIOD_RETRIES=5
+    ports:
+      - "8080:8080"
+      - "11311:11311"
+      - "8000:8000"
+    volumes:
+      - ./docker-compose/liferay-files:/mnt/liferay/files
+    depends_on:
+      - database
+      - search
+
+  search:
+    image: baseline/elasticsearch
+    build: ./docker-compose/elasticsearch/
+    environment:
+      - cluster.name=LiferayElasticsearchCluster
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - "discovery.type=single-node"
+      - "node.name=es-node1"
+      - "xpack.security.enabled=false"
