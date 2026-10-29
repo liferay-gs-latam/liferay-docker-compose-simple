@@ -8,7 +8,7 @@ services:
       - POSTGRES_DB=lportal
 
   liferay:
-    image: liferay/dxp:7.4.13.nightly-d10.0.11-20260305071812
+    image: liferay/dxp:2026.q1.13-lts-slim
     environment:
       - LIFERAY_JVM_OPTS=-Xms3g -Xmx4g
       - LIFERAY_JPDA_ENABLED=true
@@ -19,6 +19,7 @@ services:
       - LIFERAY_MODULE_PERIOD_FRAMEWORK_PERIOD_PROPERTIES_PERIOD_OSGI_PERIOD_CONSOLE=0.0.0.0:11311
       - LIFERAY_RETRY_PERIOD_JDBC_PERIOD_ON_PERIOD_STARTUP_PERIOD_DELAY=20
       - LIFERAY_RETRY_PERIOD_JDBC_PERIOD_ON_PERIOD_STARTUP_PERIOD_MAX_PERIOD_RETRIES=5
+      - LIFERAY_NETWORK_HOST_ADDRESSES=http://search:9200
     ports:
       - "8080:8080"
       - "11311:11311"
@@ -30,7 +31,7 @@ services:
       - search
 
   search:
-    image: baseline/elasticsearch
+    image: baseline/elasticsearch8
     build: ./docker-compose/elasticsearch/
     environment:
       - cluster.name=LiferayElasticsearchCluster
