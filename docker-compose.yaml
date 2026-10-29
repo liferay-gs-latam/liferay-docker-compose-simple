@@ -6,6 +6,10 @@ services:
       - POSTGRES_PASSWORD=root
       - POSTGRES_USER=root
       - POSTGRES_DB=lportal
+    volumes:
+       - ./docker-compose/database-dump/:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
 
   liferay:
     image: liferay/dxp:2026.q1.13-lts-slim
@@ -26,6 +30,9 @@ services:
       - "8000:8000"
     volumes:
       - ./docker-compose/liferay-files:/mnt/liferay/files
+      - ./liferay-deploy:/mnt/liferay/deploy
+      - ./liferay-document-library:/opt/liferay/data/document_library
+      - ./liferay-logs:/opt/liferay/logs
     depends_on:
       - database
       - search

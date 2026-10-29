@@ -22,3 +22,8 @@ docker compose logs -f liferay
 
 Access http://localhost:8080/ and login with [USER] and [PASSWORD]
 
+## DUMP
+
+```
+docker compose exec database pg_dump -U root --format=plain --no-owner --no-acl -d lportal -f /docker-entrypoint-initdb.d/database.sql
+```
