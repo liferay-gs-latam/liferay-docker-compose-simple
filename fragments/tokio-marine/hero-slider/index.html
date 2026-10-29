@@ -38,8 +38,8 @@
 					[#assign image = slide[imageRelationship]! /]
 
 					<div aria-labelledby="${fragmentEntryLinkNamespace}-slide-title-${slide?index}" aria-roledescription="slide" class="[#if slide?is_first]active[/#if] carousel-item" id="${fragmentEntryLinkNamespace}-slide-${slide?index}" role="group">
-						[#if image?has_content && image.file?? && image.file.fileURL??]
-							<img alt="${(image.file.alternativeText!"")?html}" class="carousel-item-image" src="${image.file.fileURL?replace("&imageThumbnail=1", "")?html}" />
+						[#if image?has_content && image.file?? && image.file.id??]
+							<img alt="${(image.file.alternativeText!"")?html}" class="carousel-item-image" src="/o/adaptive-media/image/${image.file.id?c}/${configuration.adaptiveMediaConfiguration?url("UTF-8")}/${image.file.name?url("UTF-8")}" />
 						[#else]
 							<div class="carousel-item-image carousel-item-image--empty"></div>
 						[/#if]

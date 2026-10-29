@@ -1,0 +1,43 @@
+.hero-cards .hero-card {
+	overflow: hidden;
+	transition: box-shadow ease 0.2s;
+}
+
+.hero-cards .hero-card:focus-within,
+.hero-cards .hero-card:hover {
+	box-shadow: 0 4px 16px rgba(39, 40, 51, 0.16);
+}
+
+.hero-cards .hero-card-image {
+	aspect-ratio: 16 / 9;
+	display: block;
+	object-fit: cover;
+	width: 100%;
+}
+
+.hero-cards .hero-card-image--empty {
+	background-color: #6b6c7e;
+}
+
+.hero-cards .hero-card-title a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.hero-cards .hero-card-title a:focus-visible {
+	outline: none;
+}
+
+.hero-cards .hero-card-title a:focus-visible::after {
+	border-radius: 4px;
+	box-shadow:
+		0 0 0 2px #fff,
+		0 0 0 4px #528eff;
+}
+
+.hero-cards-empty {
+	border: 1px dashed #a7a9bc;
+	color: #6b6c7e;
+	padding: 2rem;
+	text-align: center;
+}

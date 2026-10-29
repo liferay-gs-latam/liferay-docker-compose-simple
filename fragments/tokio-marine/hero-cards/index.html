@@ -1,0 +1,61 @@
+[#assign imageRelationship = "r_name770b1dab714b41a287b89241_l_cmsBasicDocument" /]
+[#assign slidesRelationship = "namedc16b1884bde425c8ff261b2" /]
+
+[#assign slides = [] /]
+
+[#if configuration.heroSlides?? && configuration.heroSlides.classPK?has_content]
+	[#attempt]
+		[#assign heroSlides = restClient.get("/c/heroslideses/" + configuration.heroSlides.classPK + "?nestedFields=" + slidesRelationship + "," + imageRelationship + "&nestedFieldsDepth=2") /]
+
+		[#if heroSlides?is_string]
+			[#assign heroSlides = heroSlides?eval_json /]
+		[/#if]
+	[#recover]
+		[#assign heroSlides = {} /]
+	[/#attempt]
+
+	[#if heroSlides?is_hash && heroSlides[slidesRelationship]??]
+		[#assign slides = heroSlides[slidesRelationship] /]
+	[/#if]
+[/#if]
+
+[#if slides?size == 0]
+	[#if layoutMode == "edit"]
+		<div class="hero-cards-empty">
+			Select a Hero Slides content in the fragment configuration.
+		</div>
+	[/#if]
+[#else]
+	<div class="hero-cards row">
+		[#list slides as slide]
+			[#assign image = slide[imageRelationship]! /]
+			[#assign link = (slide.link!"")?trim /]
+
+			[#if !(link?starts_with("/") || link?starts_with("http://") || link?starts_with("https://"))]
+				[#assign link = "" /]
+			[/#if]
+
+			<div class="col-md-${12 / configuration.numberOfColumns?number} col-sm-12 mb-4">
+				<div class="card h-100 hero-card position-relative">
+					[#if image?has_content && image.file?? && image.file.id??]
+						<img alt="${(image.file.alternativeText!"")?html}" class="hero-card-image" loading="lazy" src="/o/adaptive-media/image/${image.file.id?c}/${configuration.adaptiveMediaConfiguration?url("UTF-8")}/${image.file.name?url("UTF-8")}" />
+					[#else]
+						<div class="hero-card-image hero-card-image--empty"></div>
+					[/#if]
+
+					<div class="card-body">
+						<h3 class="card-title h4 hero-card-title">
+							[#if link?has_content]
+								<a class="stretched-link" href="${link?html}">${(slide.title!"")?html}</a>
+							[#else]
+								${(slide.title!"")?html}
+							[/#if]
+						</h3>
+
+						<p class="card-text">${(slide.subtitle!"")?html}</p>
+					</div>
+				</div>
+			</div>
+		[/#list]
+	</div>
+[/#if]

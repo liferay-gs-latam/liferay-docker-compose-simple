@@ -11,6 +11,13 @@
 					}
 				},
 				{
+					"defaultValue": "hero-1200",
+					"description": "ID of the Adaptive Media image resolution used for the slide images.",
+					"label": "Adaptive Media Resolution ID",
+					"name": "adaptiveMediaConfiguration",
+					"type": "text"
+				},
+				{
 					"dataType": "int",
 					"defaultValue": "450",
 					"label": "Image Height (px)",

@@ -1,0 +1,9 @@
+{
+	"configurationPath": "configuration.json",
+	"cssPath": "index.css",
+	"fragmentEntryKey": "hero-cards",
+	"htmlPath": "index.html",
+	"icon": "cards2",
+	"name": "Hero Cards",
+	"type": "component"
+}

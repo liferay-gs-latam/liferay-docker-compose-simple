@@ -1,0 +1,43 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"label": "Hero Slides",
+					"name": "heroSlides",
+					"type": "itemSelector",
+					"typeOptions": {
+						"itemType": "com.liferay.object.model.ObjectDefinition#B0G2"
+					}
+				},
+				{
+					"defaultValue": "3",
+					"label": "Number of Columns",
+					"name": "numberOfColumns",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"value": "2"
+							},
+							{
+								"value": "3"
+							},
+							{
+								"value": "4"
+							}
+						]
+					}
+				},
+				{
+					"defaultValue": "card-370",
+					"description": "ID of the Adaptive Media image resolution used for the card images.",
+					"label": "Adaptive Media Resolution ID",
+					"name": "adaptiveMediaConfiguration",
+					"type": "text"
+				}
+			],
+			"label": "cards-options"
+		}
+	]
+}
