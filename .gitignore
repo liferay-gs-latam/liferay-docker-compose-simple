@@ -1,0 +1,8 @@
+liferay-deploy/
+!liferay-deploy/.keep
+
+liferay-document-library/
+!liferay-document-library/.keep
+
+liferay-logs/
+!liferay-logs/.keep
