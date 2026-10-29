@@ -6,3 +6,8 @@ liferay-document-library/
 
 liferay-logs/
 !liferay-logs/.keep
+
+docker-compose/database-dump/
+!docker-compose/database-dump/.keep
+
+docker-compose/liferay-files/deploy/*.xml
