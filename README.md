@@ -27,4 +27,5 @@ Access http://localhost:8080/ and login with [USER] and [PASSWORD]
 ```
 docker compose exec database rm -rf /docker-entrypoint-initdb.d/database.sql
 docker compose exec database pg_dump -U root --format=plain --no-owner --no-acl -d lportal -f /docker-entrypoint-initdb.d/database.sql
+docker compose exec database chmod 777 /docker-entrypoint-initdb.d/database.sql
 ```

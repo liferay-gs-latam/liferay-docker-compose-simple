@@ -11,3 +11,5 @@ docker-compose/database-dump/
 !docker-compose/database-dump/.keep
 
 docker-compose/liferay-files/deploy/*.xml
+
+liferay-sources
