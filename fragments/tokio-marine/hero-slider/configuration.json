@@ -1,0 +1,36 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"label": "Hero Slides",
+					"name": "heroSlides",
+					"type": "itemSelector",
+					"typeOptions": {
+						"itemType": "com.liferay.object.model.ObjectDefinition#B0G2"
+					}
+				},
+				{
+					"dataType": "int",
+					"defaultValue": "450",
+					"label": "Image Height (px)",
+					"name": "imageHeight",
+					"type": "text",
+					"typeOptions": {
+						"validation": {
+							"min": 100,
+							"type": "number"
+						}
+					}
+				},
+				{
+					"defaultValue": "true",
+					"label": "auto-hide-play-button",
+					"name": "autoHidePlayButton",
+					"type": "checkbox"
+				}
+			],
+			"label": "slider-options"
+		}
+	]
+}

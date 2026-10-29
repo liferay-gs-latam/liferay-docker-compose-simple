@@ -1,0 +1,90 @@
+[#assign imageRelationship = "r_name770b1dab714b41a287b89241_l_cmsBasicDocument" /]
+[#assign slidesRelationship = "namedc16b1884bde425c8ff261b2" /]
+
+[#assign slides = [] /]
+
+[#if configuration.heroSlides?? && configuration.heroSlides.classPK?has_content]
+	[#attempt]
+		[#assign heroSlides = restClient.get("/c/heroslideses/" + configuration.heroSlides.classPK + "?nestedFields=" + slidesRelationship + "," + imageRelationship + "&nestedFieldsDepth=2") /]
+
+		[#if heroSlides?is_string]
+			[#assign heroSlides = heroSlides?eval_json /]
+		[/#if]
+	[#recover]
+		[#assign heroSlides = {} /]
+	[/#attempt]
+
+	[#if heroSlides?is_hash && heroSlides[slidesRelationship]??]
+		[#assign slides = heroSlides[slidesRelationship] /]
+	[/#if]
+[/#if]
+
+[#if slides?size == 0]
+	[#if layoutMode == "edit"]
+		<div class="hero-slider-empty">
+			Select a Hero Slides content in the fragment configuration.
+		</div>
+	[/#if]
+[#else]
+	<div aria-roledescription="carousel" class="hero-slider pb-4" role="group" style="--hero-slider-height: ${configuration.imageHeight}px;">
+		<div class="carousel">
+			<button aria-controls="${fragmentEntryLinkNamespace}-carouselInner" aria-label="Previous Slide" class="carousel-control carousel-control-prev" type="button">
+				<span aria-hidden="true" class="carousel-control-icon carousel-control-prev-icon"></span>
+				<span class="sr-only">Previous</span>
+			</button>
+
+			<div aria-atomic="false" aria-live="polite" class="carousel-inner text-break" id="${fragmentEntryLinkNamespace}-carouselInner">
+				[#list slides as slide]
+					[#assign image = slide[imageRelationship]! /]
+
+					<div aria-labelledby="${fragmentEntryLinkNamespace}-slide-title-${slide?index}" aria-roledescription="slide" class="[#if slide?is_first]active[/#if] carousel-item" id="${fragmentEntryLinkNamespace}-slide-${slide?index}" role="group">
+						[#if image?has_content && image.file?? && image.file.fileURL??]
+							<img alt="${(image.file.alternativeText!"")?html}" class="carousel-item-image" src="${image.file.fileURL?replace("&imageThumbnail=1", "")?html}" />
+						[#else]
+							<div class="carousel-item-image carousel-item-image--empty"></div>
+						[/#if]
+
+						<div class="carousel-caption d-md-block d-none">
+							<div id="${fragmentEntryLinkNamespace}-slide-title-${slide?index}">
+								<p class="h2">${(slide.title!"")?html}</p>
+							</div>
+
+							<div class="clearfix mb-4">
+								<p>${(slide.subtitle!"")?html}</p>
+							</div>
+						</div>
+					</div>
+				[/#list]
+			</div>
+
+			<button aria-controls="${fragmentEntryLinkNamespace}-carouselInner" aria-label="Next Slide" class="carousel-control carousel-control-next" type="button">
+				<span aria-hidden="true" class="carousel-control-icon carousel-control-next-icon"></span>
+				<span class="sr-only">Next</span>
+			</button>
+
+			<div class="carousel-footer">
+				<button class="carousel-toggle-button [#if !configuration.autoHidePlayButton]carousel-toggle-button--always-visible[/#if] stopped" type="button">
+					<span aria-hidden="true" class="carousel-toggle-icon-stop d-none">
+						[@clay["icon"] symbol="pause" /]
+					</span>
+					<span aria-hidden="true" class="carousel-toggle-icon-start">
+						[@clay["icon"] symbol="play" /]
+					</span>
+					<span class="carousel-toggle-text sr-only">
+						Start slide rotation
+					</span>
+				</button>
+
+				<ol class="carousel-navigation">
+					[#list slides as slide]
+					<li>
+						<button aria-controls="${fragmentEntryLinkNamespace}-slide-${slide?index}" aria-current="[#if slide?is_first]true[#else]false[/#if]" aria-label="Go to slide ${slide?counter}" class="carousel-item-button [#if slide?is_first]active[/#if]" type="button">
+							<span aria-hidden="true" class="carousel-item-button-icon"></span>
+						</button>
+					</li>
+					[/#list]
+				</ol>
+			</div>
+		</div>
+	</div>
+[/#if]
