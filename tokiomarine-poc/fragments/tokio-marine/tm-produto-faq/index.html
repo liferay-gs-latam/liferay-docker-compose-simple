@@ -41,7 +41,9 @@
 		<div class="tm-empty">Tokio - Produto: Perguntas Frequentes: selecione um Produto de Seguro na configuração do fragmento.</div>
 	[/#if]
 [#else]
-	[#assign faqs = produto.tmProdutoFaqs![] /]
+	[#-- The CMS editor always submits one instance of each repeatable group, so empty or incomplete items are ignored --]
+
+	[#assign faqs = (produto.tmProdutoFaqs![])?filter(faq -> (faq.pergunta!"")?has_content && (faq.resposta!"")?has_content) /]
 
 	[#if faqs?has_content]
 		<section class="tm-section tm-produto-faq" id="perguntas-frequentes">

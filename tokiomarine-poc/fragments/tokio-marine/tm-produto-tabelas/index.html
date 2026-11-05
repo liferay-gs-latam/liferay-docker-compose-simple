@@ -41,8 +41,15 @@
 		<div class="tm-empty">Tokio - Produto: Tabelas de Planos: selecione um Produto de Seguro na configuração do fragmento.</div>
 	[/#if]
 [#else]
+	[#-- The CMS editor always submits one instance of each repeatable group, so empty or incomplete items are ignored --]
+
 	[#list produto.tmProdutoTabelas![] as tabela]
-		[#assign planos = tabela.planos?split("|")?map(plano -> plano?trim)?filter(plano -> plano?has_content) /]
+		[#assign planos = (tabela.planos!"")?split("|")?map(plano -> plano?trim)?filter(plano -> plano?has_content) /]
+		[#assign linhas = (tabela.tmTabelaLinhas![])?filter(linha -> (linha.servico!"")?has_content) /]
+
+		[#if !planos?has_content || !linhas?has_content]
+			[#continue]
+		[/#if]
 
 		<section class="tm-section tm-produto-tabelas">
 			<div class="tm-container">
@@ -51,7 +58,9 @@
 						<span class="tm-tag">${tabela.tag?html}</span>
 					[/#if]
 
-					<h2 class="tm-section__title">${tabela.titulo?html}</h2>
+					[#if tabela.titulo?has_content]
+						<h2 class="tm-section__title">${tabela.titulo?html}</h2>
+					[/#if]
 
 					[#if tabela.subtitulo?has_content]
 						<p class="tm-section__subtitle">${tabela.subtitulo?html}</p>
@@ -71,7 +80,7 @@
 						</thead>
 
 						<tbody>
-							[#list tabela.tmTabelaLinhas![] as linha]
+							[#list linhas as linha]
 								[#assign incluidos = (linha.incluidoEm!"")?split("|")?map(plano -> plano?trim) /]
 
 								<tr>

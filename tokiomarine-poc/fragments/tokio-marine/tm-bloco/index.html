@@ -61,9 +61,11 @@
 				[/#if]
 			</div>
 
-			[#if (bloco.tmBlocoItens![])?has_content]
+			[#assign itens = (bloco.tmBlocoItens![])?filter(item -> (item.texto!"")?has_content) /]
+
+			[#if itens?has_content]
 				<ul class="tm-bloco__items">
-					[#list bloco.tmBlocoItens as item]
+					[#list itens as item]
 						<li>${item.texto?keep_before("|")?html}</li>
 					[/#list]
 				</ul>

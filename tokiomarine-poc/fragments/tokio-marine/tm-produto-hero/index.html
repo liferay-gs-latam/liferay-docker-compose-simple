@@ -33,7 +33,7 @@
 [#assign produto = {} /]
 
 [#if produtoId?has_content]
-	[#assign produto = tmFetch("/c/tmprodutos/" + produtoId + "?nestedFields=r_tmProdutoImagem_l_cmsBasicDocument,r_tmCategoriaProdutos_c_tmCategoria") /]
+	[#assign produto = tmFetch("/c/tmprodutos/" + produtoId + "?nestedFields=r_tmProdutoImagem_l_cmsBasicDocument,r_tmProdutoIcone_l_cmsBasicDocument,r_tmCategoriaProdutos_c_tmCategoria") /]
 [/#if]
 
 [#if !produto.title??]
@@ -42,6 +42,7 @@
 	[/#if]
 [#else]
 	[#assign categoria = produto.r_tmCategoriaProdutos_c_tmCategoria! /]
+	[#assign icone = tmImage(produto.r_tmProdutoIcone_l_cmsBasicDocument!) /]
 	[#assign imagem = tmImage(produto.r_tmProdutoImagem_l_cmsBasicDocument!) /]
 
 	<section class="tm-produto-hero">
@@ -60,33 +61,41 @@
 				<span aria-current="page">${produto.title?html}</span>
 			</nav>
 
-			<div class="tm-produto-hero__grid">
+			<article class="tm-produto-hero__card">
+				[#if imagem?has_content]
+					<div aria-hidden="true" class="tm-produto-hero__media">
+						<img alt="" class="tm-produto-hero__image" src="${imagem}" />
+					</div>
+				[/#if]
+
+				<div aria-hidden="true" class="tm-produto-hero__overlay"></div>
+
 				<div class="tm-produto-hero__content">
 					[#if produto.rotulo?has_content]
-						<p class="tm-produto-hero__eyebrow">${produto.rotulo?html}</p>
+						<p class="tm-produto-hero__eyebrow">
+							[#if icone?has_content]
+								<img alt="" class="tm-produto-hero__eyebrow-icon" src="${icone}" />
+							[/#if]
+
+							<span>${produto.rotulo?html}</span>
+						</p>
 					[/#if]
 
 					<h1 class="tm-produto-hero__title">${produto.title?html}</h1>
 
 					[#if produto.subtitulo?has_content]
-						<p class="tm-produto-hero__subtitle">${produto.subtitulo?html}</p>
+						<p class="tm-produto-hero__lead">${produto.subtitulo?html}</p>
 					[/#if]
 
 					<div class="tm-produto-hero__actions">
 						[#if produto.linkBotao?has_content]
-							<a class="tm-btn tm-btn--primary" href="${produto.linkBotao?html}" rel="noopener" target="_blank">${(produto.textoBotao!"Contrate online")?html}</a>
+							<a class="tm-produto-hero__cta" href="${produto.linkBotao?html}" rel="noopener" target="_blank">${(produto.textoBotao!"Contrate online")?html}</a>
 						[/#if]
 
-						<a class="tm-btn tm-btn--secondary" href="#perguntas-frequentes">Tire suas dúvidas</a>
+						<a class="tm-produto-hero__cta tm-produto-hero__cta--ghost" href="#perguntas-frequentes">Tire suas dúvidas</a>
 					</div>
 				</div>
-
-				[#if imagem?has_content]
-					<div class="tm-produto-hero__media">
-						<img alt="${produto.title?html}" class="tm-produto-hero__image" src="${imagem}" />
-					</div>
-				[/#if]
-			</div>
+			</article>
 		</div>
 	</section>
 [/#if]

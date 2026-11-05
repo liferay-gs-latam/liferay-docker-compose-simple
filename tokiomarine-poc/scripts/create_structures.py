@@ -28,6 +28,10 @@ RICH_TEXT = ("RichText", "Clob")
 TEXT = ("Text", "String")
 
 
+# Fields of repeatable groups are never required: the CMS editor always shows
+# one instance of each group, so a required field there would force every
+# entry to have at least one item
+
 def field(name, label, field_type=TEXT, required=False):
 	business_type, db_type = field_type
 
@@ -77,7 +81,7 @@ STRUCTURES = [
 		"groups": [
 			{
 				"erc": "TM_BLOCO_ITEM",
-				"fields": [field("texto", "Texto", required=True)],
+				"fields": [field("texto", "Texto")],
 				"label": "Itens",
 				"name": "TmBlocoItem",
 				"relationship": "tmBlocoItens",
@@ -125,14 +129,14 @@ STRUCTURES = [
 				"erc": "TM_PRODUTO_SECAO",
 				"fields": [
 					field("tag", "Tag"),
-					field("titulo", "Título", required=True),
+					field("titulo", "Título"),
 					field("subtitulo", "Subtítulo", LONG_TEXT),
 				],
 				"groups": [
 					{
 						"erc": "TM_PRODUTO_SECAO_ITEM",
 						"fields": [
-							field("titulo", "Título", required=True),
+							field("titulo", "Título"),
 							field("descricao", "Descrição", LONG_TEXT),
 						],
 						"images": {"tmSecaoItemIcone": "Ícone"},
@@ -149,16 +153,16 @@ STRUCTURES = [
 				"erc": "TM_PRODUTO_TABELA",
 				"fields": [
 					field("tag", "Tag"),
-					field("titulo", "Título", required=True),
+					field("titulo", "Título"),
 					field("subtitulo", "Subtítulo", LONG_TEXT),
-					field("planos", "Planos (separados por |)", required=True),
+					field("planos", "Planos (separados por |)"),
 					field("nota", "Nota de rodapé", LONG_TEXT),
 				],
 				"groups": [
 					{
 						"erc": "TM_PRODUTO_TABELA_LINHA",
 						"fields": [
-							field("servico", "Serviço", required=True),
+							field("servico", "Serviço"),
 							field(
 								"incluidoEm",
 								"Incluído nos planos (separados por |)"),
@@ -175,8 +179,8 @@ STRUCTURES = [
 			{
 				"erc": "TM_PRODUTO_FAQ",
 				"fields": [
-					field("pergunta", "Pergunta", required=True),
-					field("resposta", "Resposta", LONG_TEXT, required=True),
+					field("pergunta", "Pergunta"),
+					field("resposta", "Resposta", LONG_TEXT),
 				],
 				"label": "Perguntas frequentes",
 				"name": "TmProdutoFaq",
