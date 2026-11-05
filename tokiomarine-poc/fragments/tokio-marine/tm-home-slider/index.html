@@ -1,4 +1,10 @@
+[#-- Links keep the /web/<site> prefix only when the visitor is using it; on the site virtual host they stay at the root --]
+
 [#assign siteURL = themeDisplay.getPathFriendlyURLPublic() + themeDisplay.getScopeGroup().getFriendlyURL() /]
+
+[#if !themeDisplay.getURLCurrent()?starts_with(siteURL)]
+	[#assign siteURL = "" /]
+[/#if]
 
 [#function tmFetch path]
 	[#attempt]

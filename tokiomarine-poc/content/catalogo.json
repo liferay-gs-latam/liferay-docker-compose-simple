@@ -35,7 +35,7 @@
 			"title": "Seguros Tokio Marine"
 		},
 		{
-			"linkBotao": "/web/guest/seguros",
+			"linkBotao": "/seguros",
 			"slug": "seguros-mais-buscados",
 			"texto": "Seguros flexíveis para você, sua família e seus bens. Simule agora e descubra como é fácil viver mais tranquilo.",
 			"textoBotao": "Ver todos os seguros",

@@ -197,7 +197,7 @@ BLOCOS = [
 		"title": "Seguros Tokio Marine",
 	},
 	{
-		"linkBotao": "/web/guest/seguros",
+		"linkBotao": "/seguros",
 		"slug": "seguros-mais-buscados",
 		"texto": (
 			"Seguros flexíveis para você, sua família e seus bens. Simule "

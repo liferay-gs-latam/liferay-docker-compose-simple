@@ -1,4 +1,10 @@
+[#-- Links keep the /web/<site> prefix only when the visitor is using it; on the site virtual host they stay at the root --]
+
 [#assign siteURL = themeDisplay.getPathFriendlyURLPublic() + themeDisplay.getScopeGroup().getFriendlyURL() /]
+
+[#if !themeDisplay.getURLCurrent()?starts_with(siteURL)]
+	[#assign siteURL = "" /]
+[/#if]
 
 [#function tmFetch path]
 	[#attempt]
@@ -53,7 +59,7 @@
 	</div>
 
 	<div class="tm-container tm-header__main">
-		<a class="tm-header__logo" href="${siteURL}">
+		<a class="tm-header__logo" href="${siteURL}/">
 			<img alt="Tokio Marine Seguradora" data-lfr-editable-id="logo" data-lfr-editable-type="image" src="http://dev.tokiomarine:8080/documents/53737/53739/logo.png/df38f7c0-fa0e-154d-4d26-017a58b53c84" />
 		</a>
 
