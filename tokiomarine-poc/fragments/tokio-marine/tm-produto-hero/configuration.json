@@ -1,0 +1,17 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"description": "Preenchido automaticamente na página de exibição do produto.",
+					"label": "Produto",
+					"name": "produto",
+					"type": "itemSelector",
+					"typeOptions": {
+						"itemType": "com.liferay.object.model.ObjectDefinition#U6J3"
+					}
+				}
+			]
+		}
+	]
+}

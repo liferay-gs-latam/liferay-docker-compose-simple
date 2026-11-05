@@ -1,0 +1,88 @@
+[#assign siteURL = themeDisplay.getPathFriendlyURLPublic() + themeDisplay.getScopeGroup().getFriendlyURL() /]
+
+[#function tmFetch path]
+	[#attempt]
+		[#local response = restClient.get(path) /]
+
+		[#if response?is_string]
+			[#local response = response?eval_json /]
+		[/#if]
+
+		[#return response /]
+	[#recover]
+		[#return {} /]
+	[/#attempt]
+[/#function]
+
+[#function tmImage document]
+	[#if document?? && document?is_hash && document.file?? && document.file.fileURL??]
+		[#return document.file.fileURL?keep_before("&imageThumbnail") /]
+	[/#if]
+
+	[#return "" /]
+[/#function]
+
+[#assign categorias = (tmFetch("/c/tmcategorias/scopes/Marketing?pageSize=50&nestedFields=tmCategoriaProdutos,r_tmProdutoIcone_l_cmsBasicDocument&nestedFieldsDepth=2").items![])?sort_by("ordem") /]
+
+[#assign segmentos = [] /]
+
+[#list categorias as categoria]
+	[#list categoria.tmCategoriaProdutos![] as produto]
+		[#list produto.taxonomyCategoryBriefs![] as brief]
+			[#if !segmentos?seq_contains(brief.taxonomyCategoryName)]
+				[#assign segmentos = segmentos + [brief.taxonomyCategoryName] /]
+			[/#if]
+		[/#list]
+	[/#list]
+[/#list]
+
+<section class="tm-section tm-catalogo">
+	<div class="tm-container">
+		<div class="tm-section__header">
+			<h2 class="tm-section__title">${configuration.titulo?html}</h2>
+
+			<p class="tm-section__subtitle">${configuration.subtitulo?html}</p>
+		</div>
+
+		[#if segmentos?size > 1]
+			<div aria-label="Filtrar por segmento" class="tm-catalogo__filters" role="group">
+				<button aria-pressed="true" class="tm-catalogo__filter is-active" data-segmento="" type="button">Todos</button>
+
+				[#list segmentos?sort as segmento]
+					<button aria-pressed="false" class="tm-catalogo__filter" data-segmento="${segmento?html}" type="button">${segmento?html}</button>
+				[/#list]
+			</div>
+		[/#if]
+
+		[#list categorias as categoria]
+			<div class="tm-catalogo__categoria">
+				<div class="tm-catalogo__categoria-header">
+					<h3 class="tm-catalogo__categoria-title">
+						<a href="${siteURL}/categoria/marketing/${categoria.friendlyUrlPath}">${categoria.title?html}</a>
+					</h3>
+
+					<p class="tm-catalogo__categoria-text">${(categoria.descricaoCurta!"")?html}</p>
+				</div>
+
+				<div class="tm-grid">
+					[#list (categoria.tmCategoriaProdutos![])?sort_by("ordem") as produto]
+						[#assign icone = tmImage(produto.r_tmProdutoIcone_l_cmsBasicDocument!) /]
+						[#assign nomesSegmento = (produto.taxonomyCategoryBriefs![])?map(brief -> brief.taxonomyCategoryName) /]
+
+						<a class="tm-card tm-catalogo__produto" data-segmentos="${nomesSegmento?join("|")?html}" href="${siteURL}/seguro/marketing/${produto.friendlyUrlPath}">
+							[#if icone?has_content]
+								<span class="tm-icon"><img alt="" src="${icone}" /></span>
+							[/#if]
+
+							<h4 class="tm-card__title">${produto.title?html}</h4>
+
+							<p class="tm-card__text">${(produto.resumo!"")?html}</p>
+
+							<span class="tm-catalogo__more">Conheça ›</span>
+						</a>
+					[/#list]
+				</div>
+			</div>
+		[/#list]
+	</div>
+</section>

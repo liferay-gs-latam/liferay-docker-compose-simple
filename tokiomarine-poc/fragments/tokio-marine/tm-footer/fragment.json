@@ -1,0 +1,9 @@
+{
+	"configurationPath": "configuration.json",
+	"cssPath": "index.css",
+	"fragmentEntryKey": "tm-footer",
+	"htmlPath": "index.html",
+	"icon": "nav-bar",
+	"name": "Tokio - Footer",
+	"type": "component"
+}

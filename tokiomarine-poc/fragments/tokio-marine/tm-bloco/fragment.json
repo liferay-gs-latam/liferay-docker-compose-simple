@@ -1,0 +1,9 @@
+{
+	"configurationPath": "configuration.json",
+	"cssPath": "index.css",
+	"fragmentEntryKey": "tm-bloco",
+	"htmlPath": "index.html",
+	"icon": "web-content",
+	"name": "Tokio - Bloco de Conteúdo",
+	"type": "component"
+}

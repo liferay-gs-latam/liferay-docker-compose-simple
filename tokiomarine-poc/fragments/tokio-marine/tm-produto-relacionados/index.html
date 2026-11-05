@@ -1,0 +1,75 @@
+[#assign siteURL = themeDisplay.getPathFriendlyURLPublic() + themeDisplay.getScopeGroup().getFriendlyURL() /]
+
+[#function tmFetch path]
+	[#attempt]
+		[#local response = restClient.get(path) /]
+
+		[#if response?is_string]
+			[#local response = response?eval_json /]
+		[/#if]
+
+		[#return response /]
+	[#recover]
+		[#return {} /]
+	[/#attempt]
+[/#function]
+
+[#function tmImage document]
+	[#if document?? && document?is_hash && document.file?? && document.file.fileURL??]
+		[#return document.file.fileURL?keep_before("&imageThumbnail") /]
+	[/#if]
+
+	[#return "" /]
+[/#function]
+
+[#assign produtoId = "" /]
+
+[#if produtoObject??]
+	[#assign produtoId = produtoObject.objectEntryId?c /]
+[#elseif configuration.produto?? && configuration.produto.classPK??]
+	[#assign produtoId = configuration.produto.classPK /]
+[/#if]
+
+[#assign produto = {} /]
+
+[#if produtoId?has_content]
+	[#assign produto = tmFetch("/c/tmprodutos/" + produtoId + "?nestedFields=tmProdutoRelacionados,r_tmProdutoIcone_l_cmsBasicDocument&nestedFieldsDepth=2") /]
+[/#if]
+
+[#if !produto.title??]
+	[#if layoutMode == "edit"]
+		<div class="tm-empty">Tokio - Produto: Produtos Relacionados: selecione um Produto de Seguro na configuração do fragmento.</div>
+	[/#if]
+[#else]
+	[#assign relacionados = produto.tmProdutoRelacionados![] /]
+
+	[#if relacionados?has_content]
+		<section class="tm-section tm-section--surface tm-produto-relacionados">
+			<div class="tm-container">
+				<div class="tm-section__header">
+					<span class="tm-tag">Proteja também</span>
+
+					<h2 class="tm-section__title">${configuration.titulo?html}</h2>
+				</div>
+
+				<div class="tm-grid">
+					[#list relacionados as item]
+						[#assign icone = tmImage(item.r_tmProdutoIcone_l_cmsBasicDocument!) /]
+
+						<a class="tm-card" href="${siteURL}/seguro/marketing/${item.friendlyUrlPath}">
+							[#if icone?has_content]
+								<span class="tm-icon"><img alt="" src="${icone}" /></span>
+							[/#if]
+
+							<h3 class="tm-card__title">${item.title?html}</h3>
+
+							<p class="tm-card__text">${(item.resumo!"")?html}</p>
+
+							<span class="tm-produto-relacionados__more">Conheça ›</span>
+						</a>
+					[/#list]
+				</div>
+			</div>
+		</section>
+	[/#if]
+[/#if]

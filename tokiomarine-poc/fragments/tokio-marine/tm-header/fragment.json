@@ -1,0 +1,10 @@
+{
+	"configurationPath": "configuration.json",
+	"cssPath": "index.css",
+	"fragmentEntryKey": "tm-header",
+	"htmlPath": "index.html",
+	"icon": "nav-bar",
+	"jsPath": "index.js",
+	"name": "Tokio - Header",
+	"type": "component"
+}

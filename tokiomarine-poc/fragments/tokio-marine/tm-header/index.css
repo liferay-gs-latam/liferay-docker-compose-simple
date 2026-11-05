@@ -1,0 +1,250 @@
+.tm-header {
+	background: #fff;
+	box-shadow: 0 1px 0 #e5e7eb;
+	position: relative;
+	z-index: 1000;
+}
+
+.tm-header__topbar {
+	background: var(--tm-green-dark, #004d3a);
+	font-size: 0.8125rem;
+}
+
+.tm-header__topbar-inner {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	min-height: 40px;
+}
+
+.tm-header__shortcuts {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+}
+
+.tm-header__shortcuts a,
+.tm-header__quote {
+	color: #fff;
+}
+
+.tm-header__quote {
+	background: var(--tm-gold, #c7800b);
+	border-radius: 30px;
+	font-weight: 600;
+	padding: 0.25rem 1rem;
+}
+
+.tm-header__shortcuts a:hover,
+.tm-header__quote:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.tm-header__main {
+	align-items: center;
+	display: flex;
+	gap: 2rem;
+	min-height: 80px;
+}
+
+.tm-header__logo img {
+	display: block;
+	height: 44px;
+	width: auto;
+}
+
+.tm-header__nav {
+	align-items: center;
+	display: flex;
+	flex: 1;
+	gap: 0.5rem;
+}
+
+.tm-header__link {
+	background: none;
+	border: 0;
+	color: var(--tm-text, #101828);
+	cursor: pointer;
+	font-weight: 600;
+	padding: 1.75rem 1rem;
+}
+
+.tm-header__dropdown-toggle::after {
+	content: '▾';
+	font-size: 0.75rem;
+	margin-left: 0.4rem;
+}
+
+.tm-header__link:hover,
+.tm-header__link[aria-expanded='true'] {
+	color: var(--tm-green, #006551);
+}
+
+.tm-header__item--relative {
+	position: relative;
+}
+
+.tm-header__mega,
+.tm-header__dropdown {
+	background: #fff;
+	box-shadow: 0 16px 32px rgba(16, 24, 40, 0.12);
+	display: none;
+	position: absolute;
+}
+
+.tm-header__mega.is-open,
+.tm-header__dropdown.is-open {
+	display: block;
+}
+
+.tm-header__mega {
+	border-top: 3px solid var(--tm-green, #006551);
+	left: 0;
+	padding: 2rem 0;
+	right: 0;
+	top: 100%;
+}
+
+.tm-header__mega-inner {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.tm-header__mega-title {
+	color: var(--tm-green, #006551);
+	display: block;
+	font-weight: 700;
+	margin-bottom: 0.75rem;
+}
+
+.tm-header__mega-column ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.tm-header__mega-column li a {
+	color: var(--tm-text, #101828);
+	display: block;
+	padding: 0.35rem 0;
+}
+
+.tm-header__mega-column li a:hover {
+	color: var(--tm-green, #006551);
+}
+
+.tm-header__mega-highlight {
+	background: var(--tm-green-soft, #e6f0ee);
+	border-radius: var(--tm-radius, 16px);
+	padding: 1.5rem;
+}
+
+.tm-header__dropdown {
+	border-radius: 0 0 12px 12px;
+	min-width: 260px;
+	padding: 0.75rem 0;
+	top: 100%;
+}
+
+.tm-header__dropdown a {
+	color: var(--tm-text, #101828);
+	display: block;
+	padding: 0.5rem 1.25rem;
+}
+
+.tm-header__dropdown a:hover {
+	background: var(--tm-green-soft, #e6f0ee);
+	color: var(--tm-green, #006551);
+	text-decoration: none;
+}
+
+.tm-header__search {
+	margin-left: auto;
+}
+
+.tm-header__search input {
+	border: 1px solid #e5e7eb;
+	border-radius: 30px;
+	padding: 0.6rem 1.25rem;
+	width: 240px;
+}
+
+.tm-header__search input:focus {
+	border-color: var(--tm-green, #006551);
+	outline: none;
+}
+
+.tm-header__toggle {
+	background: none;
+	border: 0;
+	display: none;
+	flex-direction: column;
+	gap: 5px;
+	margin-left: auto;
+	padding: 0.5rem;
+}
+
+.tm-header__toggle span {
+	background: var(--tm-green, #006551);
+	display: block;
+	height: 2px;
+	width: 24px;
+}
+
+@media (max-width: 991.98px) {
+	.tm-header__shortcuts {
+		display: none;
+	}
+
+	.tm-header__topbar-inner {
+		justify-content: flex-end;
+	}
+
+	.tm-header__toggle {
+		display: flex;
+	}
+
+	.tm-header__nav {
+		align-items: stretch;
+		background: #fff;
+		box-shadow: 0 16px 32px rgba(16, 24, 40, 0.12);
+		display: none;
+		flex-direction: column;
+		left: 0;
+		padding: 1rem;
+		position: absolute;
+		right: 0;
+		top: 100%;
+	}
+
+	.tm-header__nav.is-open {
+		display: flex;
+	}
+
+	.tm-header__link {
+		padding: 0.75rem 0;
+		text-align: left;
+		width: 100%;
+	}
+
+	.tm-header__mega,
+	.tm-header__dropdown {
+		box-shadow: none;
+		position: static;
+	}
+
+	.tm-header__mega {
+		border-top: 0;
+		padding: 0 0 1rem;
+	}
+
+	.tm-header__search {
+		margin: 0.5rem 0 0;
+	}
+
+	.tm-header__search input {
+		width: 100%;
+	}
+}

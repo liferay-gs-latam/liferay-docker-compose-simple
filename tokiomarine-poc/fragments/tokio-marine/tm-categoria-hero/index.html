@@ -1,0 +1,68 @@
+[#assign siteURL = themeDisplay.getPathFriendlyURLPublic() + themeDisplay.getScopeGroup().getFriendlyURL() /]
+
+[#function tmFetch path]
+	[#attempt]
+		[#local response = restClient.get(path) /]
+
+		[#if response?is_string]
+			[#local response = response?eval_json /]
+		[/#if]
+
+		[#return response /]
+	[#recover]
+		[#return {} /]
+	[/#attempt]
+[/#function]
+
+[#function tmImage document]
+	[#if document?? && document?is_hash && document.file?? && document.file.fileURL??]
+		[#return document.file.fileURL?keep_before("&imageThumbnail") /]
+	[/#if]
+
+	[#return "" /]
+[/#function]
+
+[#assign categoriaId = "" /]
+
+[#if categoriaObject??]
+	[#assign categoriaId = categoriaObject.objectEntryId?c /]
+[#elseif configuration.categoria?? && configuration.categoria.classPK??]
+	[#assign categoriaId = configuration.categoria.classPK /]
+[/#if]
+
+[#assign categoria = {} /]
+
+[#if categoriaId?has_content]
+	[#assign categoria = tmFetch("/c/tmcategorias/" + categoriaId + "?nestedFields=r_tmCategoriaImagem_l_cmsBasicDocument&nestedFieldsDepth=2") /]
+[/#if]
+
+[#if !categoria.title??]
+	[#if layoutMode == "edit"]
+		<div class="tm-empty">Selecione uma Categoria de Seguro na configuração do fragmento.</div>
+	[/#if]
+[#else]
+
+	[#assign imagem = tmImage(categoria.r_tmCategoriaImagem_l_cmsBasicDocument!) /]
+
+	<section class="tm-categoria-hero">
+		[#if imagem?has_content]
+			<img alt="" class="tm-categoria-hero__image" src="${imagem}" />
+		[/#if]
+
+		<div class="tm-container tm-categoria-hero__content">
+			<nav aria-label="Breadcrumb" class="tm-categoria-hero__breadcrumb">
+				<a href="${siteURL}">Início</a>
+				<span aria-hidden="true">›</span>
+				<a href="${siteURL}/seguros">Seguros</a>
+				<span aria-hidden="true">›</span>
+				<span aria-current="page">${categoria.title?html}</span>
+			</nav>
+
+			<p class="tm-categoria-hero__eyebrow">${(categoria.rotulo!"")?html}</p>
+
+			<h1 class="tm-categoria-hero__title">${categoria.title?html}</h1>
+
+			<p class="tm-categoria-hero__text">${(categoria.descricao!"")?html}</p>
+		</div>
+	</section>
+[/#if]

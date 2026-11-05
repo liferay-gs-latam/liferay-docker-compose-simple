@@ -1,0 +1,17 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"description": "Bloco com título, texto e botão da seção.",
+					"label": "Bloco de Conteúdo",
+					"name": "bloco",
+					"type": "itemSelector",
+					"typeOptions": {
+						"itemType": "com.liferay.object.model.ObjectDefinition#H8R2"
+					}
+				}
+			]
+		}
+	]
+}

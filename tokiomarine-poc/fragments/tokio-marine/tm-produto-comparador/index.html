@@ -1,0 +1,76 @@
+[#assign siteURL = themeDisplay.getPathFriendlyURLPublic() + themeDisplay.getScopeGroup().getFriendlyURL() /]
+
+[#function tmFetch path]
+	[#attempt]
+		[#local response = restClient.get(path) /]
+
+		[#if response?is_string]
+			[#local response = response?eval_json /]
+		[/#if]
+
+		[#return response /]
+	[#recover]
+		[#return {} /]
+	[/#attempt]
+[/#function]
+
+[#function tmImage document]
+	[#if document?? && document?is_hash && document.file?? && document.file.fileURL??]
+		[#return document.file.fileURL?keep_before("&imageThumbnail") /]
+	[/#if]
+
+	[#return "" /]
+[/#function]
+
+[#assign produtoId = "" /]
+
+[#if produtoObject??]
+	[#assign produtoId = produtoObject.objectEntryId?c /]
+[#elseif configuration.produto?? && configuration.produto.classPK??]
+	[#assign produtoId = configuration.produto.classPK /]
+[/#if]
+
+[#assign produto = {} /]
+
+[#if produtoId?has_content]
+	[#assign produto = tmFetch("/c/tmprodutos/" + produtoId + "?nestedFields=r_tmCategoriaProdutos_c_tmCategoria&nestedFieldsDepth=1") /]
+[/#if]
+
+[#if !produto.title??]
+	[#if layoutMode == "edit"]
+		<div class="tm-empty">Tokio - Produto: Comparador da Categoria: selecione um Produto de Seguro na configuração do fragmento.</div>
+	[/#if]
+[#else]
+	[#assign categoria = produto.r_tmCategoriaProdutos_c_tmCategoria! /]
+
+	[#if categoria?has_content && categoria.id??]
+		[#assign categoriaProdutos = tmFetch("/c/tmcategorias/" + categoria.id?c + "?nestedFields=tmCategoriaProdutos") /]
+		[#assign irmaos = (categoriaProdutos.tmCategoriaProdutos![])?sort_by("ordem") /]
+
+		[#if irmaos?size > 1]
+			<section class="tm-section tm-section--surface tm-produto-comparador">
+				<div class="tm-container">
+					<div class="tm-section__header">
+						<span class="tm-tag">${(categoria.title!"")?html}</span>
+
+						<h2 class="tm-section__title">${configuration.titulo?html}</h2>
+
+						<p class="tm-section__subtitle">Compare as opções e escolha a que melhor atende ao seu perfil.</p>
+					</div>
+
+					<div class="tm-produto-comparador__list">
+						[#list irmaos as item]
+							<a class="tm-produto-comparador__row [#if item.id?c == produto.id?c]is-current[/#if]" href="${siteURL}/seguro/marketing/${item.friendlyUrlPath}">
+								<strong class="tm-produto-comparador__name">${item.title?html}</strong>
+								<span class="tm-produto-comparador__profile">${(item.resumo!"")?html}</span>
+								<span class="tm-produto-comparador__cta">
+									[#if item.id?c == produto.id?c]Você está aqui[#else]Ver plano ›[/#if]
+								</span>
+							</a>
+						[/#list]
+					</div>
+				</div>
+			</section>
+		[/#if]
+	[/#if]
+[/#if]

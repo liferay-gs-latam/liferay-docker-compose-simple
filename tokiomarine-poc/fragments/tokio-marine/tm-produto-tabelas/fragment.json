@@ -1,0 +1,9 @@
+{
+	"configurationPath": "configuration.json",
+	"cssPath": "index.css",
+	"fragmentEntryKey": "tm-produto-tabelas",
+	"htmlPath": "index.html",
+	"icon": "table",
+	"name": "Tokio - Produto: Tabelas de Planos",
+	"type": "component"
+}

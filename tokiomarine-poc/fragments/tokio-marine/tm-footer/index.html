@@ -1,0 +1,101 @@
+[#assign siteURL = themeDisplay.getPathFriendlyURLPublic() + themeDisplay.getScopeGroup().getFriendlyURL() /]
+
+[#function tmFetch path]
+	[#attempt]
+		[#local response = restClient.get(path) /]
+
+		[#if response?is_string]
+			[#local response = response?eval_json /]
+		[/#if]
+
+		[#return response /]
+	[#recover]
+		[#return {} /]
+	[/#attempt]
+[/#function]
+
+[#function tmImage document]
+	[#if document?? && document?is_hash && document.file?? && document.file.fileURL??]
+		[#return document.file.fileURL?keep_before("&imageThumbnail") /]
+	[/#if]
+
+	[#return "" /]
+[/#function]
+
+[#assign menus = {} /]
+[#assign navigationMenus = tmFetch("/headless-delivery/v1.0/sites/" + themeDisplay.getScopeGroupId()?c + "/navigation-menus?pageSize=50") /]
+
+[#list navigationMenus.items![] as navigationMenu]
+	[#assign menus = menus + {navigationMenu.name: navigationMenu.navigationMenuItems![]} /]
+[/#list]
+
+[#function tmItemName item]
+	[#return (item.typeSettings.name)!(item.name!"") /]
+[/#function]
+
+[#function tmItemURL item]
+	[#return (item.typeSettings.url)!(item.link!"#") /]
+[/#function]
+
+[#assign categorias = (tmFetch("/c/tmcategorias/scopes/Marketing?pageSize=50&nestedFields=tmCategoriaProdutos").items![])?sort_by("ordem") /]
+
+<footer class="tm-footer">
+	<div class="tm-container">
+		<div class="tm-footer__columns">
+			<div class="tm-footer__column">
+				<h2 class="tm-footer__title">Seguros</h2>
+
+				<ul>
+					[#list categorias as categoria]
+						<li><a href="${siteURL}/categoria/marketing/${categoria.friendlyUrlPath}">${categoria.title?html}</a></li>
+					[/#list]
+
+					<li><a href="${siteURL}/seguros">Todos os seguros</a></li>
+				</ul>
+			</div>
+
+			[#list menus["Tokio - Rodapé"]![] as coluna]
+				<div class="tm-footer__column">
+					<h2 class="tm-footer__title">${tmItemName(coluna)?html}</h2>
+
+					<ul>
+						[#list coluna.navigationMenuItems![] as item]
+							<li><a href="${tmItemURL(item)?html}">${tmItemName(item)?html}</a></li>
+						[/#list]
+					</ul>
+				</div>
+			[/#list]
+
+			<div class="tm-footer__column">
+				<h2 class="tm-footer__title">Aplicativo Tokio Marine</h2>
+
+				<div class="tm-footer__apps">
+					<a href="${configuration.appStore?html}" rel="noopener" target="_blank"><img alt="Baixar na App Store" src="http://dev.tokiomarine:8080/documents/53737/53739/app-store-image-png.png/60da2c4d-952d-8cf4-c1f8-dc75c4da2620" /></a>
+					<a href="${configuration.googlePlay?html}" rel="noopener" target="_blank"><img alt="Disponível no Google Play" src="http://dev.tokiomarine:8080/documents/53737/53739/google-play-image-png.png/391e655a-d8c9-285f-25a2-3a0cce1013a1" /></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="tm-footer__bottom">
+			<img alt="Tokio Marine Seguradora" class="tm-footer__logo" data-lfr-editable-id="logo" data-lfr-editable-type="image" src="http://dev.tokiomarine:8080/documents/53737/53739/logo-white.png/c03e4d39-1bcc-ead8-5173-396d4de0e07c" />
+
+			<div class="tm-footer__legal">
+				<p data-lfr-editable-id="copyright" data-lfr-editable-type="text">© Tokio Marine 2026 - Todos os direitos reservados. CNPJ 33.164.021/0001-00</p>
+
+				<nav aria-label="Links legais">
+					[#list menus["Tokio - Legal"]![] as item]
+						<a href="${tmItemURL(item)?html}">${tmItemName(item)?html}</a>
+					[/#list]
+				</nav>
+			</div>
+
+			<div class="tm-footer__social">
+				[#list [["Instagram", configuration.instagram], ["YouTube", configuration.youtube], ["Facebook", configuration.facebook], ["LinkedIn", configuration.linkedin]] as social]
+					[#if social[1]?has_content]
+						<a href="${social[1]?html}" rel="noopener" target="_blank">${social[0]}</a>
+					[/#if]
+				[/#list]
+			</div>
+		</div>
+	</div>
+</footer>

@@ -1,0 +1,23 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"description": "Preenchido automaticamente na página de exibição do produto.",
+					"label": "Produto",
+					"name": "produto",
+					"type": "itemSelector",
+					"typeOptions": {
+						"itemType": "com.liferay.object.model.ObjectDefinition#U6J3"
+					}
+				},
+				{
+					"defaultValue": "Cote online agora em menos de 5 minutos. Se preferir, fale com um de nossos canais de atendimento.",
+					"label": "Texto",
+					"name": "texto",
+					"type": "text"
+				}
+			]
+		}
+	]
+}

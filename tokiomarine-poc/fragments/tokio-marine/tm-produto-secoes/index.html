@@ -1,0 +1,79 @@
+[#assign siteURL = themeDisplay.getPathFriendlyURLPublic() + themeDisplay.getScopeGroup().getFriendlyURL() /]
+
+[#function tmFetch path]
+	[#attempt]
+		[#local response = restClient.get(path) /]
+
+		[#if response?is_string]
+			[#local response = response?eval_json /]
+		[/#if]
+
+		[#return response /]
+	[#recover]
+		[#return {} /]
+	[/#attempt]
+[/#function]
+
+[#function tmImage document]
+	[#if document?? && document?is_hash && document.file?? && document.file.fileURL??]
+		[#return document.file.fileURL?keep_before("&imageThumbnail") /]
+	[/#if]
+
+	[#return "" /]
+[/#function]
+
+[#assign produtoId = "" /]
+
+[#if produtoObject??]
+	[#assign produtoId = produtoObject.objectEntryId?c /]
+[#elseif configuration.produto?? && configuration.produto.classPK??]
+	[#assign produtoId = configuration.produto.classPK /]
+[/#if]
+
+[#assign produto = {} /]
+
+[#if produtoId?has_content]
+	[#assign produto = tmFetch("/c/tmprodutos/" + produtoId + "?nestedFields=tmProdutoSecoes,tmSecaoItens,r_tmSecaoItemIcone_l_cmsBasicDocument&nestedFieldsDepth=3") /]
+[/#if]
+
+[#if !produto.title??]
+	[#if layoutMode == "edit"]
+		<div class="tm-empty">Tokio - Produto: Seções de Destaques: selecione um Produto de Seguro na configuração do fragmento.</div>
+	[/#if]
+[#else]
+	[#list produto.tmProdutoSecoes![] as secao]
+		<section class="tm-section [#if secao?index % 2 == 1]tm-section--surface[/#if] tm-produto-secoes">
+			<div class="tm-container">
+				<div class="tm-section__header">
+					[#if secao.tag?has_content]
+						<span class="tm-tag">${secao.tag?html}</span>
+					[/#if]
+
+					<h2 class="tm-section__title">${secao.titulo?html}</h2>
+
+					[#if secao.subtitulo?has_content]
+						<p class="tm-section__subtitle">${secao.subtitulo?html}</p>
+					[/#if]
+				</div>
+
+				<div class="tm-grid">
+					[#list secao.tmSecaoItens![] as item]
+						[#assign icone = tmImage(item.r_tmSecaoItemIcone_l_cmsBasicDocument!) /]
+
+						<article class="tm-card">
+							[#if icone?has_content]
+								<span class="tm-icon"><img alt="" src="${icone}" /></span>
+							[/#if]
+
+							<h3 class="tm-card__title">${item.titulo?html}</h3>
+
+							[#if item.descricao?has_content]
+								<p class="tm-card__text">${item.descricao?html}</p>
+							[/#if]
+						</article>
+					[/#list]
+				</div>
+			</div>
+		</section>
+	[/#list]
+[/#if]

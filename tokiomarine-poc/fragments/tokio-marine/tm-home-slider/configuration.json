@@ -1,0 +1,27 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"defaultValue": "Tokio Marine Seguros para Você e Sua Empresa",
+					"label": "Título (SEO)",
+					"name": "titulo",
+					"type": "text"
+				},
+				{
+					"dataType": "int",
+					"defaultValue": "8",
+					"label": "Quantidade máxima de produtos",
+					"name": "quantidade",
+					"type": "text",
+					"typeOptions": {
+						"validation": {
+							"min": 1,
+							"type": "number"
+						}
+					}
+				}
+			]
+		}
+	]
+}

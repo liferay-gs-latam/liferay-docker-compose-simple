@@ -1,0 +1,9 @@
+{
+	"configurationPath": "configuration.json",
+	"cssPath": "index.css",
+	"fragmentEntryKey": "tm-produto-cta",
+	"htmlPath": "index.html",
+	"icon": "bolt",
+	"name": "Tokio - Produto: Chamada para Contratação",
+	"type": "component"
+}

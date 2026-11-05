@@ -1,0 +1,67 @@
+[#assign siteURL = themeDisplay.getPathFriendlyURLPublic() + themeDisplay.getScopeGroup().getFriendlyURL() /]
+
+[#function tmFetch path]
+	[#attempt]
+		[#local response = restClient.get(path) /]
+
+		[#if response?is_string]
+			[#local response = response?eval_json /]
+		[/#if]
+
+		[#return response /]
+	[#recover]
+		[#return {} /]
+	[/#attempt]
+[/#function]
+
+[#function tmImage document]
+	[#if document?? && document?is_hash && document.file?? && document.file.fileURL??]
+		[#return document.file.fileURL?keep_before("&imageThumbnail") /]
+	[/#if]
+
+	[#return "" /]
+[/#function]
+
+[#assign produtoId = "" /]
+
+[#if produtoObject??]
+	[#assign produtoId = produtoObject.objectEntryId?c /]
+[#elseif configuration.produto?? && configuration.produto.classPK??]
+	[#assign produtoId = configuration.produto.classPK /]
+[/#if]
+
+[#assign produto = {} /]
+
+[#if produtoId?has_content]
+	[#assign produto = tmFetch("/c/tmprodutos/" + produtoId + "?nestedFields=tmProdutoFaqs&nestedFieldsDepth=1") /]
+[/#if]
+
+[#if !produto.title??]
+	[#if layoutMode == "edit"]
+		<div class="tm-empty">Tokio - Produto: Perguntas Frequentes: selecione um Produto de Seguro na configuração do fragmento.</div>
+	[/#if]
+[#else]
+	[#assign faqs = produto.tmProdutoFaqs![] /]
+
+	[#if faqs?has_content]
+		<section class="tm-section tm-produto-faq" id="perguntas-frequentes">
+			<div class="tm-container tm-produto-faq__container">
+				<div class="tm-section__header tm-section__header--center">
+					<span class="tm-tag">FAQ</span>
+
+					<h2 class="tm-section__title">Perguntas frequentes sobre o ${produto.title?html}</h2>
+				</div>
+
+				<div class="tm-produto-faq__list">
+					[#list faqs as faq]
+						<details class="tm-produto-faq__item" [#if faq?is_first]open[/#if]>
+							<summary class="tm-produto-faq__question">${faq.pergunta?html}</summary>
+
+							<p class="tm-produto-faq__answer">${faq.resposta?html}</p>
+						</details>
+					[/#list]
+				</div>
+			</div>
+		</section>
+	[/#if]
+[/#if]

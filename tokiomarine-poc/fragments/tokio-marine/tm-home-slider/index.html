@@ -1,0 +1,71 @@
+[#assign siteURL = themeDisplay.getPathFriendlyURLPublic() + themeDisplay.getScopeGroup().getFriendlyURL() /]
+
+[#function tmFetch path]
+	[#attempt]
+		[#local response = restClient.get(path) /]
+
+		[#if response?is_string]
+			[#local response = response?eval_json /]
+		[/#if]
+
+		[#return response /]
+	[#recover]
+		[#return {} /]
+	[/#attempt]
+[/#function]
+
+[#function tmImage document]
+	[#if document?? && document?is_hash && document.file?? && document.file.fileURL??]
+		[#return document.file.fileURL?keep_before("&imageThumbnail") /]
+	[/#if]
+
+	[#return "" /]
+[/#function]
+
+[#assign produtos = (tmFetch("/c/tmprodutos/scopes/Marketing?pageSize=" + configuration.quantidade + "&sort=ordem:asc&filter=destaqueHome%20eq%20true&nestedFields=r_tmProdutoImagem_l_cmsBasicDocument").items![]) /]
+
+[#if !produtos?has_content]
+	[#if layoutMode == "edit"]
+		<div class="tm-empty">Nenhum produto marcado como "Destaque na home" no CMS.</div>
+	[/#if]
+[#else]
+	<section aria-roledescription="carousel" class="tm-home-slider">
+		<h1 class="sr-only">${configuration.titulo?html}</h1>
+
+		<div class="tm-home-slider__slides">
+			[#list produtos as produto]
+				[#assign imagem = tmImage(produto.r_tmProdutoImagem_l_cmsBasicDocument!) /]
+
+				<div aria-roledescription="slide" class="tm-home-slider__slide [#if produto?is_first]is-active[/#if]" role="group">
+					[#if imagem?has_content]
+						<img alt="" class="tm-home-slider__image" src="${imagem}" />
+					[/#if]
+
+					<div class="tm-container tm-home-slider__content">
+						<p class="tm-home-slider__eyebrow">${(produto.rotulo!"")?html}</p>
+
+						<h2 class="tm-home-slider__title">${produto.title?html}</h2>
+
+						<p class="tm-home-slider__text">${(produto.resumo!"")?html}</p>
+
+						<div class="tm-home-slider__actions">
+							[#if produto.linkBotao?has_content]
+								<a class="tm-btn tm-btn--gold" href="${produto.linkBotao?html}" rel="noopener" target="_blank">${(produto.textoBotao!"Contrate online")?html}</a>
+							[/#if]
+
+							<a class="tm-btn tm-btn--light" href="${siteURL}/seguro/marketing/${produto.friendlyUrlPath}">Saiba mais</a>
+						</div>
+					</div>
+				</div>
+			[/#list]
+		</div>
+
+		<div class="tm-container">
+			<div class="tm-home-slider__tabs" role="tablist">
+				[#list produtos as produto]
+					<button aria-selected="[#if produto?is_first]true[#else]false[/#if]" class="tm-home-slider__tab [#if produto?is_first]is-active[/#if]" role="tab" type="button">${produto.title?html}</button>
+				[/#list]
+			</div>
+		</div>
+	</section>
+[/#if]

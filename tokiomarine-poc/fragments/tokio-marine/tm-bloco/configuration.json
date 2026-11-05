@@ -1,0 +1,34 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"label": "Bloco de Conteúdo",
+					"name": "bloco",
+					"type": "itemSelector",
+					"typeOptions": {
+						"itemType": "com.liferay.object.model.ObjectDefinition#H8R2"
+					}
+				},
+				{
+					"defaultValue": "banner",
+					"label": "Estilo",
+					"name": "estilo",
+					"type": "select",
+					"typeOptions": {
+						"validValues": [
+							{
+								"label": "Banner com imagem de fundo",
+								"value": "banner"
+							},
+							{
+								"label": "Hero de página",
+								"value": "hero"
+							}
+						]
+					}
+				}
+			]
+		}
+	]
+}

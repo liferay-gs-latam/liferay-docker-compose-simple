@@ -1,0 +1,9 @@
+{
+	"configurationPath": "configuration.json",
+	"cssPath": "index.css",
+	"fragmentEntryKey": "tm-categorias-carrossel",
+	"htmlPath": "index.html",
+	"icon": "cards-full",
+	"name": "Tokio - Home: Carrossel de Categorias",
+	"type": "component"
+}

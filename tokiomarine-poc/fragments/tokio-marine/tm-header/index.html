@@ -1,0 +1,107 @@
+[#assign siteURL = themeDisplay.getPathFriendlyURLPublic() + themeDisplay.getScopeGroup().getFriendlyURL() /]
+
+[#function tmFetch path]
+	[#attempt]
+		[#local response = restClient.get(path) /]
+
+		[#if response?is_string]
+			[#local response = response?eval_json /]
+		[/#if]
+
+		[#return response /]
+	[#recover]
+		[#return {} /]
+	[/#attempt]
+[/#function]
+
+[#function tmImage document]
+	[#if document?? && document?is_hash && document.file?? && document.file.fileURL??]
+		[#return document.file.fileURL?keep_before("&imageThumbnail") /]
+	[/#if]
+
+	[#return "" /]
+[/#function]
+
+[#assign menus = {} /]
+[#assign navigationMenus = tmFetch("/headless-delivery/v1.0/sites/" + themeDisplay.getScopeGroupId()?c + "/navigation-menus?pageSize=50") /]
+
+[#list navigationMenus.items![] as navigationMenu]
+	[#assign menus = menus + {navigationMenu.name: navigationMenu.navigationMenuItems![]} /]
+[/#list]
+
+[#function tmItemName item]
+	[#return (item.typeSettings.name)!(item.name!"") /]
+[/#function]
+
+[#function tmItemURL item]
+	[#return (item.typeSettings.url)!(item.link!"#") /]
+[/#function]
+
+[#assign categorias = (tmFetch("/c/tmcategorias/scopes/Marketing?pageSize=50&nestedFields=tmCategoriaProdutos").items![])?sort_by("ordem") /]
+
+<header class="tm-header">
+	<div class="tm-header__topbar">
+		<div class="tm-container tm-header__topbar-inner">
+			<nav aria-label="Atalhos" class="tm-header__shortcuts">
+				[#list menus["Tokio - Atalhos"]![] as item]
+					<a href="${tmItemURL(item)?html}">${tmItemName(item)?html}</a>
+				[/#list]
+			</nav>
+
+			<a class="tm-header__quote" href="${configuration.linkContratar?html}">Quero contratar</a>
+		</div>
+	</div>
+
+	<div class="tm-container tm-header__main">
+		<a class="tm-header__logo" href="${siteURL}">
+			<img alt="Tokio Marine Seguradora" data-lfr-editable-id="logo" data-lfr-editable-type="image" src="http://dev.tokiomarine:8080/documents/53737/53739/logo.png/df38f7c0-fa0e-154d-4d26-017a58b53c84" />
+		</a>
+
+		<button aria-controls="${fragmentEntryLinkNamespace}-nav" aria-expanded="false" aria-label="Abrir menu" class="tm-header__toggle" type="button">
+			<span></span><span></span><span></span>
+		</button>
+
+		<nav aria-label="Menu principal" class="tm-header__nav" id="${fragmentEntryLinkNamespace}-nav">
+			<div class="tm-header__item">
+				<button aria-expanded="false" class="tm-header__link tm-header__dropdown-toggle" data-target="seguros" type="button">Seguros</button>
+
+				<div class="tm-header__mega" data-panel="seguros">
+					<div class="tm-container tm-header__mega-inner">
+						[#list categorias as categoria]
+							<div class="tm-header__mega-column">
+								<a class="tm-header__mega-title" href="${siteURL}/categoria/marketing/${categoria.friendlyUrlPath}">${categoria.title?html}</a>
+
+								<ul>
+									[#list (categoria.tmCategoriaProdutos![])?sort_by("ordem") as produto]
+										<li><a href="${siteURL}/seguro/marketing/${produto.friendlyUrlPath}">${produto.title?html}</a></li>
+									[/#list]
+								</ul>
+							</div>
+						[/#list]
+
+						<div class="tm-header__mega-column tm-header__mega-highlight">
+							<p>Encontre a proteção ideal para você, sua família e seu patrimônio.</p>
+
+							<a class="tm-btn tm-btn--primary" href="${siteURL}/seguros">Ver todos os seguros</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="tm-header__item tm-header__item--relative">
+				<button aria-expanded="false" class="tm-header__link tm-header__dropdown-toggle" data-target="canais" type="button">Canais de Atendimento</button>
+
+				<div class="tm-header__dropdown" data-panel="canais">
+					[#list menus["Tokio - Canais de Atendimento"]![] as item]
+						<a href="${tmItemURL(item)?html}">${tmItemName(item)?html}</a>
+					[/#list]
+				</div>
+			</div>
+
+			<form action="${siteURL}/search" class="tm-header__search" method="get" role="search">
+				<label class="sr-only" for="${fragmentEntryLinkNamespace}-q">Buscar no site</label>
+				<input id="${fragmentEntryLinkNamespace}-q" name="q" placeholder="Buscar produto" type="search" />
+			</form>
+		</nav>
+	</div>
+</header>

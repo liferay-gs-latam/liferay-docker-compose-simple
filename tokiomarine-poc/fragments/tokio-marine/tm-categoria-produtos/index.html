@@ -1,0 +1,84 @@
+[#assign siteURL = themeDisplay.getPathFriendlyURLPublic() + themeDisplay.getScopeGroup().getFriendlyURL() /]
+
+[#function tmFetch path]
+	[#attempt]
+		[#local response = restClient.get(path) /]
+
+		[#if response?is_string]
+			[#local response = response?eval_json /]
+		[/#if]
+
+		[#return response /]
+	[#recover]
+		[#return {} /]
+	[/#attempt]
+[/#function]
+
+[#function tmImage document]
+	[#if document?? && document?is_hash && document.file?? && document.file.fileURL??]
+		[#return document.file.fileURL?keep_before("&imageThumbnail") /]
+	[/#if]
+
+	[#return "" /]
+[/#function]
+
+[#assign categoriaId = "" /]
+
+[#if categoriaObject??]
+	[#assign categoriaId = categoriaObject.objectEntryId?c /]
+[#elseif configuration.categoria?? && configuration.categoria.classPK??]
+	[#assign categoriaId = configuration.categoria.classPK /]
+[/#if]
+
+[#assign categoria = {} /]
+
+[#if categoriaId?has_content]
+	[#assign categoria = tmFetch("/c/tmcategorias/" + categoriaId + "?nestedFields=tmCategoriaProdutos,r_tmProdutoImagem_l_cmsBasicDocument&nestedFieldsDepth=2") /]
+[/#if]
+
+[#if !categoria.title??]
+	[#if layoutMode == "edit"]
+		<div class="tm-empty">Selecione uma Categoria de Seguro na configuração do fragmento.</div>
+	[/#if]
+[#else]
+
+	[#assign produtos = (categoria.tmCategoriaProdutos![])?sort_by("ordem") /]
+
+	<section class="tm-section tm-categoria-produtos">
+		<div class="tm-container">
+			<div class="tm-section__header">
+				<span class="tm-tag">${produtos?size} produtos</span>
+
+				<h2 class="tm-section__title">Conheça os ${categoria.title?lower_case?html} da Tokio Marine</h2>
+			</div>
+
+			<div class="tm-categoria-produtos__grid">
+				[#list produtos as produto]
+					[#assign imagem = tmImage(produto.r_tmProdutoImagem_l_cmsBasicDocument!) /]
+
+					<article class="tm-categoria-produtos__card">
+						[#if imagem?has_content]
+							<img alt="" class="tm-categoria-produtos__image" loading="lazy" src="${imagem}" />
+						[/#if]
+
+						<div class="tm-categoria-produtos__body">
+							<p class="tm-categoria-produtos__eyebrow">${(produto.rotulo!"")?html}</p>
+
+							<h3 class="tm-card__title">${produto.title?html}</h3>
+
+							<p class="tm-card__text">${(produto.resumo!"")?html}</p>
+
+							<div class="tm-categoria-produtos__actions">
+								<a class="tm-btn tm-btn--primary" href="${siteURL}/seguro/marketing/${produto.friendlyUrlPath}">Saiba mais</a>
+
+								[#if produto.linkBotao?has_content]
+									<a class="tm-btn tm-btn--secondary" href="${produto.linkBotao?html}" rel="noopener" target="_blank">${(produto.textoBotao!"Contrate online")?html}</a>
+								[/#if]
+							</div>
+						</div>
+					</article>
+				[/#list]
+			</div>
+		</div>
+	</section>
+[/#if]

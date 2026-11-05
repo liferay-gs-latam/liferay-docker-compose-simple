@@ -1,0 +1,55 @@
+[#assign siteURL = themeDisplay.getPathFriendlyURLPublic() + themeDisplay.getScopeGroup().getFriendlyURL() /]
+
+[#function tmFetch path]
+	[#attempt]
+		[#local response = restClient.get(path) /]
+
+		[#if response?is_string]
+			[#local response = response?eval_json /]
+		[/#if]
+
+		[#return response /]
+	[#recover]
+		[#return {} /]
+	[/#attempt]
+[/#function]
+
+[#function tmImage document]
+	[#if document?? && document?is_hash && document.file?? && document.file.fileURL??]
+		[#return document.file.fileURL?keep_before("&imageThumbnail") /]
+	[/#if]
+
+	[#return "" /]
+[/#function]
+
+[#assign produtoId = "" /]
+
+[#if produtoObject??]
+	[#assign produtoId = produtoObject.objectEntryId?c /]
+[#elseif configuration.produto?? && configuration.produto.classPK??]
+	[#assign produtoId = configuration.produto.classPK /]
+[/#if]
+
+[#assign produto = {} /]
+
+[#if produtoId?has_content]
+	[#assign produto = tmFetch("/c/tmprodutos/" + produtoId + "") /]
+[/#if]
+
+[#if !produto.title??]
+	[#if layoutMode == "edit"]
+		<div class="tm-empty">Tokio - Produto: Aviso Legal: selecione um Produto de Seguro na configuração do fragmento.</div>
+	[/#if]
+[#else]
+	[#if produto.aviso?has_content]
+		<div class="tm-produto-aviso">
+			<div class="tm-container">
+				<p>${produto.aviso?html}</p>
+
+				[#if produto.codigoProduto?has_content]
+					<p>Código do produto: ${produto.codigoProduto?html}</p>
+				[/#if]
+			</div>
+		</div>
+	[/#if]
+[/#if]

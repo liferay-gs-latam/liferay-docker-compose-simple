@@ -1,0 +1,1863 @@
+{
+	"blocos": [
+		{
+			"imagem": "http://www.tokiomarine.com.br:8080/documents/6797060/0/banner-sustentabilidade-auto.webp",
+			"itens": [
+				"Apólice digital disponível no Super App",
+				"Programa de compensação de carbono ativo",
+				"Relatórios ESG publicados anualmente",
+				"Projetos sociais e ambientais em curso"
+			],
+			"linkBotao": "https://www.tokiomarine.com.br/empresa/esg",
+			"slug": "sustentabilidade",
+			"tag": "Sustentabilidade",
+			"texto": "A Tokio Marine integra práticas ESG em toda a sua operação: do produto ao atendimento, do sinistro ao impacto na comunidade.",
+			"textoBotao": "Conheça nossa agenda ESG",
+			"title": "Comprometidos com um futuro mais seguro."
+		},
+		{
+			"itens": [
+				"Fale com a Marina pelo WhatsApp|https://wa.me/5511995786546",
+				"Acesse o Chat Online|https://www.tokiomarine.com.br/chat-cliente"
+			],
+			"slug": "atendimento",
+			"tag": "Atendimento",
+			"texto": "Prefere falar com alguém agora?",
+			"title": "Canais de atendimento"
+		},
+		{
+			"imagem": "http://www.tokiomarine.com.br:8080/documents/6797060/0/Seguros Tokio Marine Seguradora.png",
+			"linkBotao": "https://www.tokiomarine.com.br/cotacoes",
+			"slug": "seguros-tokio-marine",
+			"tag": "SEGUROS",
+			"texto": "Conheça os Seguros Tokio Marine. Planos completos para sua casa, família, carro e empresa. Cote seu seguro online com facilidade.",
+			"textoBotao": "Cotar agora",
+			"title": "Seguros Tokio Marine"
+		},
+		{
+			"linkBotao": "/web/guest/seguros",
+			"slug": "seguros-mais-buscados",
+			"texto": "Seguros flexíveis para você, sua família e seus bens. Simule agora e descubra como é fácil viver mais tranquilo.",
+			"textoBotao": "Ver todos os seguros",
+			"title": "Nossos seguros mais buscados"
+		}
+	],
+	"categorias": [
+		{
+			"descricao": "A Tokio Marine tem uma opção para cada perfil de motorista. Encontre o seu seguro em segundos.",
+			"descricaoCurta": "Proteção para o seu carro, moto ou caminhão.",
+			"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-carro.svg",
+			"imagem": "http://www.tokiomarine.com.br:8080/documents/6797060/0/Seguro Auto Tokio Marine Seguradora (2).png",
+			"ordem": 1,
+			"rotulo": "SEGUROS DE AUTOMÓVEIS",
+			"slug": "automoveis",
+			"title": "Seguros Automóveis"
+		},
+		{
+			"descricao": "Proteção para o seu lar, do jeito certo para o seu momento. Soluções completas para proprietários, inquilinos e imobiliárias.",
+			"descricaoCurta": "Soluções para proprietários, inquilinos e imobiliárias.",
+			"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-casa.svg",
+			"imagem": "http://www.tokiomarine.com.br:8080/documents/6797060/0/Seguros Residenciais Tokio Marine.png",
+			"ordem": 2,
+			"rotulo": "SEGUROS RESIDENCIAIS",
+			"slug": "residenciais",
+			"title": "Seguros Residenciais"
+		},
+		{
+			"descricao": "Proteção para quem você ama. Para cada momento da vida. Cobertura financeira para sua família ou planejamento completo para o futuro.",
+			"descricaoCurta": "Proteção para quem você ama, em cada momento da vida.",
+			"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-coracao.svg",
+			"imagem": "http://www.tokiomarine.com.br:8080/documents/6797060/0/hero-vida.jpg",
+			"ordem": 3,
+			"rotulo": "SEGUROS DE VIDA",
+			"slug": "vida",
+			"title": "Seguros Vida"
+		}
+	],
+	"produtos": [
+		{
+			"aviso": "O registro deste produto na Susep não representa aprovação ou recomendação pela autarquia.",
+			"categoria": "automoveis",
+			"codigoProduto": "AUTO, AUPP",
+			"destaqueHome": true,
+			"faqs": [
+				{
+					"pergunta": "Como funciona o carro reserva?",
+					"resposta": "Quando você aciona o seguro e o carro precisa ir para a oficina, a Tokio Marine disponibiliza um carro reserva para você não ficar sem carro enquanto aguarda o conserto. É possível contratar o serviço por 7, 15 ou 30 dias, conforme as condições do seu seguro."
+				},
+				{
+					"pergunta": "O que é perda total? Qual a diferença para perda parcial?",
+					"resposta": "Quando o carro sofre um acidente e o conserto custa mais de 75% do valor do veículo, ou quando ele não tem mais condições de ser recuperado, a seguradora considera perda total e paga o valor integral do carro conforme a apólice. Quando o conserto custa menos de 75% do valor de mercado, é perda parcial e o reparo é coberto normalmente."
+				},
+				{
+					"pergunta": "Tenho cobertura para alagamento causado por chuvas?",
+					"resposta": "Sim. Danos causados pela natureza têm cobertura desde que o segurado não tenha exposto o veículo ao risco de forma deliberada. Consulte as condições do seu seguro para verificar os limites aplicáveis."
+				},
+				{
+					"pergunta": "Como faço alterações na minha apólice?",
+					"resposta": "Entre em contato com seu Corretor ou acesse nossos canais de atendimento para solicitar qualquer alteração durante a vigência do seguro: mudança de veículo, atualização do seu perfil de motorista, alteração de endereço e coberturas."
+				},
+				{
+					"pergunta": "Posso contratar outros seguros além do Seguro Auto?",
+					"resposta": "Sim. A Tokio Marine oferece um portfólio completo de seguros para proteger o seu carro, a sua casa, a sua família e o seu negócio."
+				}
+			],
+			"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-carro.svg",
+			"imagem": "http://www.tokiomarine.com.br:8080/documents/6797060/0/092c48b8-ff2c-4672-b7b1-1d46a7082ca1.png",
+			"linkBotao": "https://cotacoes.tokiomarine.com.br/massificados/auto/digital/front/#/home",
+			"ordem": 1,
+			"relacionados": [
+				"seguro-residencial-premiado",
+				"seguro-vida",
+				"seguro-moto"
+			],
+			"resumo": "Cobertura completa com isenção de franquia sem culpa e indenização em até 5 dias úteis.",
+			"rotulo": "AUTO",
+			"secoes": [
+				{
+					"itens": [
+						{
+							"descricao": "Seu carro está coberto para os riscos mais comuns: batida com outro veículo ou objeto, incêndio e roubo ou furto. Tudo em uma contratação só.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-extintor.svg",
+							"titulo": "Colisão, Incêndio e Roubo/Furto"
+						},
+						{
+							"descricao": "Se o seu carro causar danos a outra pessoa ou veículo, esta cobertura garante proteção financeira e jurídica para você não arcar sozinho com as consequências.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-escudo.svg",
+							"titulo": "Danos a Terceiros"
+						},
+						{
+							"descricao": "Se alguém que estiver no seu carro se machucar em um acidente, esta cobertura garante proteção para os passageiros, incluindo casos de morte e invalidez.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-usuarios.svg",
+							"titulo": "Acidentes Pessoais de Passageiros"
+						},
+						{
+							"descricao": "Quando o segurado não for o culpado pelo sinistro, é possível obter isenção total da franquia. Você não arca com o custo de um acidente que não foi sua responsabilidade.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-mao-com-moedas.svg",
+							"titulo": "Isenção de franquia sem culpa"
+						},
+						{
+							"descricao": "Opcional disponível para contratação: se você precisar acionar o seguro pela primeira vez na vigência, não paga a franquia. Uma proteção extra para quem quer mais tranquilidade logo de início.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-chave-de-boca.svg",
+							"titulo": "Isenção no primeiro sinistro indenizável"
+						},
+						{
+							"descricao": "Ao contratar a cobertura de Despesas Extraordinárias (que cobre gastos extras gerados por um sinistro, como hospedagem e transporte), você garante 30% de desconto no valor da franquia quando o dano não for total. Mais economia no momento mais difícil.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6630007/6640063/icone-dollar.svg",
+							"titulo": "Desconto de 30% na franquia com Despesas Extraordinárias"
+						},
+						{
+							"descricao": "Você escolhe quanto quer pagar de franquia em caso de sinistro. Seis opções disponíveis para equilibrar o custo do seguro com o nível de proteção ideal para o seu bolso.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-usuarios.svg",
+							"titulo": "Seis opções de valor de franquia para escolher"
+						},
+						{
+							"descricao": "Pagamento da indenização integral em até 5 dias úteis após o recebimento da documentação. Agilidade para você resolver e seguir em frente.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-calendario.svg",
+							"titulo": "Indenização em até 5 dias úteis"
+						}
+					],
+					"subtitulo": "Proteção completa para os principais riscos do seu carro, com condições que fazem diferença quando você mais precisa.",
+					"tag": "",
+					"titulo": "Coberturas e diferenciais do Seguro Auto Tokio Marine."
+				},
+				{
+					"itens": [
+						{
+							"descricao": "Quando o seguro é acionado e o carro precisa ser reparado, você recebe um veículo reserva, com ar condicionado e direção hidráulica, para não ficar sem carro. Disponível por 7, 15 ou 30 dias.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-carro.svg",
+							"titulo": "Carro Reserva"
+						},
+						{
+							"descricao": "Repara desde os danos mais leves até os mais profundos que tenham atingido a lataria do veículo.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-van.svg",
+							"titulo": "Lataria e Pintura"
+						},
+						{
+							"descricao": "Reparo de arranhões e substituição de roda, pneu e itens de suspensão.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-carregamento-aspiral.svg",
+							"titulo": "Roda, Pneu e Suspensão"
+						},
+						{
+							"descricao": "Solução para pequenos reparos, incluindo a troca de para-choque. Exclusividade Tokio Marine.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-martelo.svg",
+							"titulo": "Martelinho e Para-choque"
+						}
+					],
+					"subtitulo": "Continue com a sua rotina mesmo durante o reparo do veículo.",
+					"tag": "",
+					"titulo": "Carro reserva e serviços adicionais."
+				}
+			],
+			"segmentos": [
+				"voce"
+			],
+			"slug": "seguro-auto",
+			"subtitulo": "Seguro Auto é mais do que proteger um carro. É proteger a sua rotina.",
+			"tabelas": [
+				{
+					"linhas": [
+						{
+							"incluidoEm": "Assistência Completa | Assistência VIP",
+							"servico": "Reboque do veículo segurado"
+						},
+						{
+							"incluidoEm": "Assistência Completa | Assistência VIP",
+							"servico": "Socorro mecânico"
+						},
+						{
+							"incluidoEm": "Assistência Completa | Assistência VIP",
+							"servico": "Meio de transporte alternativo"
+						},
+						{
+							"incluidoEm": "Assistência Completa | Assistência VIP",
+							"servico": "Hospedagem"
+						},
+						{
+							"incluidoEm": "Assistência Completa | Assistência VIP",
+							"servico": "Serviço de chaveiro"
+						},
+						{
+							"incluidoEm": "Assistência Completa | Assistência VIP",
+							"servico": "Substituição de pneus"
+						},
+						{
+							"incluidoEm": "Assistência VIP",
+							"servico": "Segundo guincho no mesmo evento"
+						},
+						{
+							"incluidoEm": "Assistência VIP",
+							"servico": "Reparos residenciais"
+						},
+						{
+							"incluidoEm": "Assistência VIP",
+							"servico": "Lavagem e higienização do veículo"
+						},
+						{
+							"incluidoEm": "Assistência VIP",
+							"servico": "Motorista substituto"
+						},
+						{
+							"incluidoEm": "Assistência VIP",
+							"servico": "Help desk"
+						},
+						{
+							"incluidoEm": "Assistência VIP",
+							"servico": "Carro reserva em caso de pane"
+						}
+					],
+					"nota": "Quilometragem adicional para reboque disponível em todas as assistências: opções de +100 km, +300 km, +800 km ou quilometragem ilimitada.",
+					"planos": "Assistência Completa | Assistência VIP",
+					"subtitulo": "Escolha o plano de assistência que melhor atende ao seu dia a dia.",
+					"tag": "Comparação de Assistência",
+					"titulo": "Assistência 24h para qualquer imprevisto na estrada."
+				},
+				{
+					"linhas": [
+						{
+							"incluidoEm": "Básico | Completo | Logomarca",
+							"servico": "Reparo do para-brisa"
+						},
+						{
+							"incluidoEm": "Básico | Completo | Logomarca",
+							"servico": "Reposição de vidros laterais, para-brisa e traseiro"
+						},
+						{
+							"incluidoEm": "Completo | Logomarca",
+							"servico": "Reposição de retrovisores externos e internos"
+						},
+						{
+							"incluidoEm": "Completo | Logomarca",
+							"servico": "Faróis e lanternas (lentes e lâmpadas)"
+						},
+						{
+							"incluidoEm": "Completo | Logomarca",
+							"servico": "Faróis auxiliares (milha/neblina) originais de fábrica"
+						},
+						{
+							"incluidoEm": "Completo | Logomarca",
+							"servico": "Lanternas auxiliares traseiras"
+						},
+						{
+							"incluidoEm": "Completo | Logomarca",
+							"servico": "Faróis de xenônio/LED originais de fábrica"
+						},
+						{
+							"incluidoEm": "Completo | Logomarca",
+							"servico": "Máquina de vidro elétrica/manual"
+						},
+						{
+							"incluidoEm": "Completo | Logomarca",
+							"servico": "Teto solar/panorâmico"
+						},
+						{
+							"incluidoEm": "Completo | Logomarca",
+							"servico": "Reposição com logomarca original de fábrica"
+						}
+					],
+					"nota": "",
+					"planos": "Básico | Completo | Logomarca",
+					"subtitulo": "Escolha o plano de vidros adequado ao seu carro.",
+					"tag": "",
+					"titulo": "Serviços de vidros para o seu veículo."
+				}
+			],
+			"textoBotao": "Contrate online",
+			"title": "Seguro Auto"
+		},
+		{
+			"aviso": "O registro deste produto na Susep não representa aprovação ou recomendação pela autarquia.",
+			"categoria": "automoveis",
+			"codigoProduto": "AUTO",
+			"destaqueHome": false,
+			"faqs": [
+				{
+					"pergunta": "O que é a tabela FIPE e como consultar?",
+					"resposta": "A tabela FIPE (Fundação Instituto de Pesquisas Econômicas) apresenta os valores médios dos veículos no mercado brasileiro e serve como referência para o cálculo de indenizações. Você pode consultar o valor do seu carro diretamente no site da fundação."
+				},
+				{
+					"pergunta": "Como funciona o seguro para pessoas com deficiência (PCD)?",
+					"resposta": "Funciona como qualquer outro seguro. A pessoa com deficiência apresenta a CNH especial na contratação. Na Tokio Marine, segurados PCD têm vantagens exclusivas: em caso de indenização, o valor é calculado pelo preço contratado sem dedução dos impostos isentados. Além disso, o carro reserva está disponível em todos os acionamentos e, se não houver veículo adaptado disponível, a Tokio Marine providencia o serviço de táxi."
+				},
+				{
+					"pergunta": "Como sei quem é o condutor principal do veículo?",
+					"resposta": "O condutor principal é a pessoa legalmente habilitada que usa o carro por 5 ou mais dias na semana. Se mais de uma pessoa usar o carro em dias ou horários diferentes, o condutor principal é a pessoa mais jovem que o utiliza por 3 ou mais dias na semana."
+				},
+				{
+					"pergunta": "Quais documentos preciso para avisar um acidente?",
+					"resposta": "Quando ocorre um acidente, nossos colaboradores orientam sobre os documentos necessários para cada situação. Você também pode consultar a lista completa de orientações no link abaixo."
+				},
+				{
+					"pergunta": "Posso contratar outros seguros além do Seguro Auto Clássico?",
+					"resposta": "Sim. A Tokio Marine oferece seguros para proteger o seu carro, a sua casa, a sua família e o seu negócio."
+				}
+			],
+			"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-carro.svg",
+			"imagem": "http://www.tokiomarine.com.br:8080/documents/6797060/0/image_5a39d5c3 (3).png",
+			"linkBotao": "https://cotacoes.tokiomarine.com.br/massificados/auto/digital/front/#/home",
+			"ordem": 2,
+			"relacionados": [
+				"seguro-auto",
+				"seguro-residencial-premiado",
+				"seguro-vida"
+			],
+			"resumo": "Cobertura completa para colisão, roubo e terceiros com preço acessível.",
+			"rotulo": "SEGUROS DE AUTOMÓVEIS",
+			"secoes": [
+				{
+					"itens": [
+						{
+							"descricao": "Seu carro está coberto para os riscos mais comuns: batida com outro veículo ou objeto, incêndio e roubo ou furto. Tudo em uma contratação só.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-extintor.svg",
+							"titulo": "Colisão, Incêndio e Roubo/Furto"
+						},
+						{
+							"descricao": "Se o seu carro causar danos a outra pessoa ou veículo, esta cobertura garante proteção financeira e jurídica para você não arcar sozinho com as consequências.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-escudo.svg",
+							"titulo": "Danos a Terceiros"
+						},
+						{
+							"descricao": "Se alguém que estiver no seu carro se machucar em um acidente, esta cobertura garante proteção para os passageiros, incluindo casos de morte e invalidez.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-usuarios.svg",
+							"titulo": "Acidentes Pessoais de Passageiros"
+						},
+						{
+							"descricao": "Opcional disponível para contratação: se você precisar acionar o seguro pela primeira vez na vigência, não paga a franquia. Uma proteção extra para quem quer mais tranquilidade logo de início.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-fone-de-ouvido.svg",
+							"titulo": "Isenção no primeiro acionamento do seguro"
+						},
+						{
+							"descricao": "Você escolhe quanto quer pagar de franquia quando acionar o seguro. Seis opções disponíveis para equilibrar o custo do seguro com o nível de proteção ideal para o seu bolso.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-mao-com-moedas.svg",
+							"titulo": "Seis opções de valor de franquia"
+						},
+						{
+							"descricao": "Em caso de sinistro aprovado, você recebe indenização pelo valor de um veículo 0km durante os primeiros 30 dias. É possível estender esse benefício por mais 90 dias.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6630007/6640063/icone-dollar.svg",
+							"titulo": "Indenização 0km por 30 dias"
+						},
+						{
+							"descricao": "Pagamento da indenização em até 5 dias úteis após o recebimento da documentação. Agilidade para você resolver e seguir em frente.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-calendario.svg",
+							"titulo": "Indenização em até 5 dias úteis"
+						}
+					],
+					"subtitulo": "Proteção completa para os principais riscos do seu carro, com condições que fazem diferença quando você mais precisa.",
+					"tag": "",
+					"titulo": "Coberturas e diferenciais do Seguro Auto Clássico."
+				},
+				{
+					"itens": [
+						{
+							"descricao": "Quando o seguro é acionado e o carro precisa ser reparado, você recebe um veículo reserva, com ar condicionado e direção hidráulica, para não ficar sem carro. Disponível por 7, 15 ou 30 dias.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-carro.svg",
+							"titulo": "Carro Reserva"
+						},
+						{
+							"descricao": "Repara desde os danos mais leves até os mais profundos que tenham atingido a lataria do veículo.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-van.svg",
+							"titulo": "Lataria e Pintura"
+						},
+						{
+							"descricao": "Reparo de arranhões e substituição de roda, pneu e itens de suspensão.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-carregamento-aspiral.svg",
+							"titulo": "Roda, Pneu e Suspensão"
+						},
+						{
+							"descricao": "Solução para pequenos reparos, incluindo a troca de para-choque. Exclusividade Tokio Marine.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-martelo.svg",
+							"titulo": "Martelinho e Para-choque"
+						}
+					],
+					"subtitulo": "Continue com a sua rotina mesmo durante o reparo do veículo.",
+					"tag": "",
+					"titulo": "Carro reserva e serviços adicionais."
+				}
+			],
+			"segmentos": [
+				"voce"
+			],
+			"slug": "seguro-auto-classico",
+			"subtitulo": "Cobertura completa para colisão, roubo e terceiros. Com preço mais acessível.",
+			"tabelas": [
+				{
+					"linhas": [
+						{
+							"incluidoEm": "Assistência Completa | Assistência VIP",
+							"servico": "Reboque do veículo"
+						},
+						{
+							"incluidoEm": "Assistência Completa | Assistência VIP",
+							"servico": "Socorro mecânico"
+						},
+						{
+							"incluidoEm": "Assistência Completa | Assistência VIP",
+							"servico": "Meio de transporte alternativo"
+						},
+						{
+							"incluidoEm": "Assistência Completa | Assistência VIP",
+							"servico": "Hospedagem"
+						},
+						{
+							"incluidoEm": "Assistência Completa | Assistência VIP",
+							"servico": "Serviço de chaveiro"
+						},
+						{
+							"incluidoEm": "Assistência Completa | Assistência VIP",
+							"servico": "Substituição de pneus"
+						},
+						{
+							"incluidoEm": "Assistência VIP",
+							"servico": "Segundo guincho no mesmo evento"
+						},
+						{
+							"incluidoEm": "Assistência VIP",
+							"servico": "Reparos residenciais"
+						},
+						{
+							"incluidoEm": "Assistência VIP",
+							"servico": "Lavagem e higienização do veículo"
+						},
+						{
+							"incluidoEm": "Assistência VIP",
+							"servico": "Motorista substituto"
+						},
+						{
+							"incluidoEm": "Assistência VIP",
+							"servico": "Help desk"
+						},
+						{
+							"incluidoEm": "Assistência VIP",
+							"servico": "Carro reserva em caso de pane"
+						}
+					],
+					"nota": "Quilometragem adicional para reboque disponível em todas as assistências: opções de +100 km, +300 km, +800 km ou quilometragem ilimitada.",
+					"planos": "Assistência Completa | Assistência VIP",
+					"subtitulo": "Escolha o plano de assistência que melhor atende ao seu dia a dia.",
+					"tag": "Comparação de Assistências",
+					"titulo": "Assistência 24h para qualquer imprevisto na estrada."
+				},
+				{
+					"linhas": [
+						{
+							"incluidoEm": "Básico | Completo | Logomarca",
+							"servico": "Reparo do para-brisa"
+						},
+						{
+							"incluidoEm": "Básico | Completo | Logomarca",
+							"servico": "Reposição de vidros laterais, para-brisa e traseiro"
+						},
+						{
+							"incluidoEm": "Completo | Logomarca",
+							"servico": "Reposição de retrovisores externos e internos"
+						},
+						{
+							"incluidoEm": "Completo | Logomarca",
+							"servico": "Faróis e lanternas (lentes e lâmpadas)"
+						},
+						{
+							"incluidoEm": "Completo | Logomarca",
+							"servico": "Faróis auxiliares (milha/neblina) originais de fábrica"
+						},
+						{
+							"incluidoEm": "Completo | Logomarca",
+							"servico": "Lanternas auxiliares traseiras"
+						},
+						{
+							"incluidoEm": "Completo | Logomarca",
+							"servico": "Faróis de xenônio/LED originais de fábrica"
+						},
+						{
+							"incluidoEm": "Completo | Logomarca",
+							"servico": "Máquina de vidro elétrica/manual"
+						},
+						{
+							"incluidoEm": "Completo | Logomarca",
+							"servico": "Teto solar/panorâmico"
+						},
+						{
+							"incluidoEm": "Completo | Logomarca",
+							"servico": "Reposição com logomarca original de fábrica"
+						}
+					],
+					"nota": "",
+					"planos": "Básico | Completo | Logomarca",
+					"subtitulo": "Escolha o plano de vidros adequado ao seu carro.",
+					"tag": "",
+					"titulo": "Serviços de vidros para o seu veículo."
+				}
+			],
+			"textoBotao": "Contrate online",
+			"title": "Seguro Auto Clássico"
+		},
+		{
+			"aviso": "O registro deste produto na Susep não representa aprovação ou recomendação pela autarquia.",
+			"categoria": "automoveis",
+			"codigoProduto": "MOTO",
+			"destaqueHome": true,
+			"faqs": [],
+			"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-moto.svg",
+			"imagem": "http://www.tokiomarine.com.br:8080/documents/6797060/0/Seguro Moto (2).png",
+			"linkBotao": "https://cotacoes.tokiomarine.com.br/massificados/auto/digital/front/#/home",
+			"ordem": 3,
+			"relacionados": [
+				"seguro-auto",
+				"seguro-vida",
+				"seguro-residencial-premiado"
+			],
+			"resumo": "Proteção e assistência 24h para motociclistas com facilidade de pagamento.",
+			"rotulo": "MOTO",
+			"secoes": [
+				{
+					"itens": [
+						{
+							"descricao": "Dois planos de assistência para o seu perfil:\n• Reboque da moto\n• Socorro mecânico\n• Meio de transporte alternativo\n• Hospedagem\n• Reboque em caso de pneu furado",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-relogio.svg",
+							"titulo": "Assistência 24h em qualquer imprevisto"
+						},
+						{
+							"descricao": "Proteção para os principais riscos do dia a dia:\n• Reparos residenciais emergenciais\n• Cobertura opcional para danos materiais e corporais a terceiros\n• Motorista substituto\n• Help desk: configuração de equipamentos e instalação de softwares e antivírus",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-estrela.svg",
+							"titulo": "Plano VIP *(inclui tudo do Completo, mais:)"
+						},
+						{
+							"descricao": "Proteção para os principais riscos do dia a dia:\n• Cobertura completa para colisão, incêndio, roubo e furto\n• Cobertura opcional para danos materiais e corporais a terceiros\n• Opção de franquia básica ou reduzida\n• Guincho com quilometragem ilimitada *(opcional)*",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-carro.svg",
+							"titulo": "Cobertura completa para colisão, roubo, incêndio e furto"
+						},
+						{
+							"descricao": "O Seguro Moto oferece uma opção mais acessível para quem quer proteção focada: a cobertura de indenização integral.\nCom ela, você recebe 100% do valor contratado em caso de perda total. Segurança garantida sem pagar por coberturas adicionais.\nÉ a mesma solidez da Tokio Marine, no tamanho certo para o seu orçamento.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-chave-de-boca.svg",
+							"titulo": "Prefere pagar menos? Contrate só a indenização integral."
+						}
+					],
+					"subtitulo": "Escolha entre proteção completa ou apenas o essencial.",
+					"tag": "",
+					"titulo": "Benefícios"
+				}
+			],
+			"segmentos": [
+				"voce"
+			],
+			"slug": "seguro-moto",
+			"subtitulo": "Proteção completa para a sua moto com assistência 24h e valor que cabe no bolso.",
+			"tabelas": [],
+			"textoBotao": "Contrate online",
+			"title": "Seguro Moto"
+		},
+		{
+			"aviso": "O registro deste produto na Susep não representa aprovação ou recomendação pela autarquia.",
+			"categoria": "automoveis",
+			"codigoProduto": "CAMINHAO",
+			"destaqueHome": false,
+			"faqs": [
+				{
+					"pergunta": "Quanto custa o Seguro Caminhão Tokio Marine?",
+					"resposta": "Não há um valor fixo. O preço é calculado com base no modelo do veículo, perfil do condutor e região de circulação, entre outras informações. Fale com um Corretor para receber uma cotação personalizada."
+				},
+				{
+					"pergunta": "O que o Seguro Caminhão cobre?",
+					"resposta": "O seguro cobre danos ao caminhão, a terceiros, à carroceria e a equipamentos especiais em caso de acidentes durante a operação, incluindo carga e descarga. Também oferece assistência 24h e opção de cobertura de perda de faturamento."
+				},
+				{
+					"pergunta": "Tenho cobertura durante a operação de carga e descarga?",
+					"resposta": "Sim. A cobertura de carga e descarga é inclusa por padrão no Seguro Caminhão Tokio Marine, incluindo casos de basculamento. Proteção ativa do início ao fim da operação."
+				},
+				{
+					"pergunta": "Qual a diferença entre a franquia básica e a reduzida?",
+					"resposta": "Na franquia básica, o valor que você paga quando aciona o seguro é o praticado pelo mercado. Na franquia reduzida, esse valor pode ser até 50% menor, mas o custo mensal do seguro fica um pouco mais alto. A escolha depende do quanto você quer pagar no momento do uso versus no dia a dia."
+				},
+				{
+					"pergunta": "O seguro aceita caminhões com configurações especiais?",
+					"resposta": "Sim. O Seguro Caminhão Tokio Marine aceita veículos com cabine suplementar, chassi alongado ou reduzido e 3º e 4º eixos adaptados, além de caminhões com até 30 anos de fabricação."
+				}
+			],
+			"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-van.svg",
+			"imagem": "http://www.tokiomarine.com.br:8080/documents/6797060/0/hero-caminhao.png",
+			"linkBotao": "http://www.tokiomarine.com.br:8080/localizacoes?categoria=corretores",
+			"ordem": 4,
+			"relacionados": [
+				"seguro-auto",
+				"seguro-vida",
+				"seguro-imobiliario"
+			],
+			"resumo": "Proteção completa para o seu caminhão, com assistência 24h para manter a operação em movimento.",
+			"rotulo": "SEGUROS DE AUTOMÓVEIS",
+			"secoes": [
+				{
+					"itens": [
+						{
+							"descricao": "Proteção ativa durante toda a operação: danos ao caminhão, a terceiros, à carroceria e aos equipamentos em caso de acidente durante o carregamento, descarregamento ou basculamento.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-caminhao.svg",
+							"titulo": "Cobertura durante carga, descarga e basculamento"
+						},
+						{
+							"descricao": "Em caso de sinistro aprovado, você recebe indenização pelo valor de um veículo 0km durante 180 dias sem custo adicional.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-mao-com-moedas.svg",
+							"titulo": "Indenização 0km por 180 dias"
+						},
+						{
+							"descricao": "Cobertura para equipamentos acoplados ao caminhão como guindaste tipo munck , unidade frigorífica e sistemas de carga roll on/roll off.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-escudo-verificado.svg",
+							"titulo": "Proteção para equipamentos especiais"
+						},
+						{
+							"descricao": "Se o caminhão ficar parado por conta de um sinistro, a cobertura de perda de faturamento garante indenização por diária com opções de valores e limites configuráveis.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-escudo.svg",
+							"titulo": "Garantia de perda de faturamento"
+						},
+						{
+							"descricao": "O seguro aceita caminhões com cabine suplementar, chassi alongado ou reduzido e 3º e 4º eixos adaptados. Proteção para qualquer configuração de veículo, sem complicação.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-chave-de-boca.svg",
+							"titulo": "Aceitação para configurações especiais de caminhão"
+						}
+					],
+					"subtitulo": "Proteção pensada para quem vive na estrada e depende do caminhão para trabalhar.",
+					"tag": "",
+					"titulo": "Diferenciais exclusivos do Seguro Caminhão Tokio Marine."
+				},
+				{
+					"itens": [
+						{
+							"descricao": "Caminhões mais antigos também têm proteção. O seguro aceita veículos com até 30 anos de fabricação.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-calendario.svg",
+							"titulo": "Aceito para veículos de até 30 anos"
+						},
+						{
+							"descricao": "A carroceria é coberta com franquia, tornando o preço do seguro mais competitivo. Se preferir, é possível excluir a franquia da carroceria na cotação para ter proteção ainda mais completa.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-circulo-verificado.svg",
+							"titulo": "Carroceria com franquia opcional"
+						},
+						{
+							"descricao": "Quando o segurado não for o culpado pelo sinistro, é possível obter isenção total da franquia.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-dollar.svg",
+							"titulo": "Isenção de franquia sem culpa"
+						},
+						{
+							"descricao": "Ao contratar a cobertura de Despesas Extraordinárias (gastos extras gerados por um sinistro), você garante 30% de desconto no valor da franquia quando o dano não for total.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-arquivo-verificado.svg",
+							"titulo": "Desconto de 30% na franquia com Despesas Extraordinárias"
+						},
+						{
+							"descricao": "Você escolhe quanto quer pagar de franquia quando acionar o seguro. Seis opções disponíveis para equilibrar o custo do seguro com o nível de proteção ideal para a sua operação.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-cartao.svg",
+							"titulo": "Seis opções de valor de franquia"
+						}
+					],
+					"subtitulo": "",
+					"tag": "",
+					"titulo": "Destaques"
+				},
+				{
+					"itens": [
+						{
+							"descricao": "Cobertura para os principais riscos do caminhão: batida, incêndio e roubo ou furto. Proteção para o patrimônio que sustenta a operação.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-extintor.svg",
+							"titulo": "Colisão, Incêndio e Roubo/Furto"
+						},
+						{
+							"descricao": "Se o caminhão causar danos a outra pessoa ou veículo, esta cobertura garante proteção financeira e jurídica para não arcar sozinho com as consequências.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6630007/6640063/icone-escudo.svg",
+							"titulo": "Danos a Terceiros"
+						},
+						{
+							"descricao": "Cobertura para a carroceria e para equipamentos especiais acoplados ao caminhão em caso de acidente durante a operação.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-caminhao.svg",
+							"titulo": "Carroceria e Equipamentos"
+						},
+						{
+							"descricao": "Indenização por diária em caso de parada forçada por sinistro. Opções de valores e limites configuráveis conforme o perfil da operação.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-mao-com-moedas.svg",
+							"titulo": "Perda de Faturamento"
+						}
+					],
+					"subtitulo": "Proteção completa para os principais riscos ao seu caminhão.",
+					"tag": "",
+					"titulo": "Coberturas disponíveis."
+				},
+				{
+					"itens": [
+						{
+							"descricao": "Parcelamento em até 12x sem juros no cartão de crédito, sem comprometer o limite disponível.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-cartao.svg",
+							"titulo": "Cartão de crédito"
+						},
+						{
+							"descricao": "Opções adicionais de pagamento via débito em conta-corrente ou boleto bancário, conforme a preferência do caminhoneiro ou da empresa.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-arquivo.svg",
+							"titulo": "Débito em conta ou boleto"
+						}
+					],
+					"subtitulo": "Flexibilidade financeira para não comprometer o seu bolso.",
+					"tag": "",
+					"titulo": "Condições de pagamento."
+				}
+			],
+			"segmentos": [
+				"voce",
+				"empresa"
+			],
+			"slug": "seguro-caminhao",
+			"subtitulo": "Proteção completa para o seu caminhão com assistência 24h em todo o Brasil.",
+			"tabelas": [
+				{
+					"linhas": [
+						{
+							"incluidoEm": "Assistência Completa | Assistência VIP",
+							"servico": "Reboque do veículo"
+						},
+						{
+							"incluidoEm": "Assistência Completa | Assistência VIP",
+							"servico": "Socorro mecânico"
+						},
+						{
+							"incluidoEm": "Assistência Completa | Assistência VIP",
+							"servico": "Meio de transporte alternativo"
+						},
+						{
+							"incluidoEm": "Assistência Completa | Assistência VIP",
+							"servico": "Serviço de chaveiro"
+						},
+						{
+							"incluidoEm": "Assistência VIP",
+							"servico": "Reparos residenciais"
+						},
+						{
+							"incluidoEm": "Assistência VIP",
+							"servico": "Lavagem e higienização do veículo"
+						},
+						{
+							"incluidoEm": "Assistência VIP",
+							"servico": "Serviço de despachante"
+						}
+					],
+					"nota": "",
+					"planos": "Assistência Completa | Assistência VIP",
+					"subtitulo": "Duas opções de assistência para o seu perfil de uso.",
+					"tag": "",
+					"titulo": "Assistência 24h para manter a operação em movimento."
+				}
+			],
+			"textoBotao": "Fale com um Corretor",
+			"title": "Seguro Caminhão"
+		},
+		{
+			"aviso": "O registro deste produto na Susep não representa aprovação ou recomendação pela autarquia.",
+			"categoria": "residenciais",
+			"codigoProduto": "FIANCA",
+			"destaqueHome": true,
+			"faqs": [
+				{
+					"pergunta": "O que é e como funciona o Seguro Fiança Locatícia?",
+					"resposta": "É a solução que substitui o fiador e o depósito caução na hora de alugar um imóvel. O Tokio Marine Aluguel garante ao proprietário o recebimento do aluguel e encargos, enquanto oferece ao inquilino a liberdade de alugar sem depender de terceiros."
+				},
+				{
+					"pergunta": "Por que escolher o Tokio Marine Aluguel?",
+					"resposta": "Além da solidez da Tokio Marine, você conta com parcelamento sem juros durante todo o contrato, assinatura digital gratuita e uma assistência 24h completa, que inclui chaveiro, eletricista, encanador, reparo de eletrodoméstico, reparos de torneiras e pintura, descarte ecológico e consultoria de organização para um cômodo."
+				},
+				{
+					"pergunta": "Qual o valor do seguro e como ele é calculado?",
+					"resposta": "O valor é um percentual sobre o custo do aluguel. O preço final depende das coberturas que você escolher, como a inclusão de IPTU, condomínio e contas de água e luz na apólice."
+				},
+				{
+					"pergunta": "Como aciono a assistência 24h em caso de emergência?",
+					"resposta": "Você conta com serviços de chaveiro, encanador e eletricista 24 horas por dia em todo o Brasil. Para solicitar atendimento, basta ligar para 0800 30 TOKIO (0800 31 86546)."
+				},
+				{
+					"pergunta": "Quais são as formas de pagamento disponíveis?",
+					"resposta": "Você paga o seguro mês a mês, sem juros, acompanhando a duração do seu contrato de locação. O pagamento é feito via cartão de crédito ou boleto, conforme as opções da sua imobiliária."
+				},
+				{
+					"pergunta": "Posso contratar o seguro para um imóvel comercial?",
+					"resposta": "Sim. O Tokio Marine Aluguel aceita tanto imóveis residenciais (casas e apartamentos) quanto comerciais em todo o território nacional."
+				},
+				{
+					"pergunta": "Preciso ir ao cartório para assinar os documentos?",
+					"resposta": "Não. Você utiliza a assinatura eletrônica gratuita, que permite assinar o contrato do seguro de qualquer lugar, com total validade jurídica e sem custos de cartório."
+				},
+				{
+					"pergunta": "Quais documentos preciso enviar para a análise de crédito?",
+					"resposta": "O processo é rápido e digital. Geralmente, solicitamos apenas seus dados básicos e comprovantes de rendimento. Em muitos casos, a aprovação acontece em poucos minutos para você não perder o imóvel escolhido."
+				},
+				{
+					"pergunta": "Qual é a validade do seguro?",
+					"resposta": "A vigência do seguro acompanha exatamente o prazo do seu contrato de aluguel, garantindo proteção do início ao fim da locação."
+				}
+			],
+			"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-casa.svg",
+			"imagem": "http://www.tokiomarine.com.br:8080/documents/6797060/0/banner-mudanca-imovel-caixas.png",
+			"linkBotao": "https://cotacoes.tokiomarine.com.br/portais/ui/lead/#/aluguel",
+			"ordem": 5,
+			"relacionados": [
+				"seguro-imobiliario",
+				"seguro-residencial-premiado",
+				"seguro-vida"
+			],
+			"resumo": "Alugue sem fiador: garantia locatícia para inquilinos, proprietários e imobiliárias.",
+			"rotulo": "TOKIO MARINE ALUGUEL",
+			"secoes": [
+				{
+					"itens": [
+						{
+							"descricao": "Pagamento do aluguel e multa por atraso 12x, 18x, 24x e 30x o valor do aluguel.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/d/guest/escudo-svg",
+							"titulo": "Cobertura Básica"
+						}
+					],
+					"subtitulo": "Monte a proteção ideal para você.",
+					"tag": "",
+					"titulo": "Pacote completo de coberturas"
+				}
+			],
+			"segmentos": [
+				"voce",
+				"empresa"
+			],
+			"slug": "seguro-aluguel",
+			"subtitulo": "Com o Tokio Marine Aluguel você aluga sem fiador e nem depósito caução.",
+			"tabelas": [
+				{
+					"linhas": [
+						{
+							"incluidoEm": "Básico | Intermediário | Completo",
+							"servico": "Chaveiro"
+						},
+						{
+							"incluidoEm": "Básico | Intermediário | Completo",
+							"servico": "Desentupimento"
+						},
+						{
+							"incluidoEm": "Básico | Intermediário | Completo",
+							"servico": "Eletricista"
+						},
+						{
+							"incluidoEm": "Básico | Intermediário | Completo",
+							"servico": "Vidraceiro"
+						},
+						{
+							"incluidoEm": "Básico | Intermediário | Completo",
+							"servico": "Hidráulica"
+						},
+						{
+							"incluidoEm": "Intermediário | Completo",
+							"servico": "Lubrificação de fechaduras e dobradiças"
+						},
+						{
+							"incluidoEm": "Intermediário | Completo",
+							"servico": "Revisão de instalação elétrica"
+						},
+						{
+							"incluidoEm": "Intermediário | Completo",
+							"servico": "Troca de lâmpadas, tomadas e interruptores"
+						},
+						{
+							"incluidoEm": "Intermediário | Completo",
+							"servico": "Instalação ou troca de chuveiro e torneira elétrica"
+						},
+						{
+							"incluidoEm": "Intermediário | Completo",
+							"servico": "Verificação de possíveis vazamentos"
+						},
+						{
+							"incluidoEm": "Intermediário | Completo",
+							"servico": "Fixação de quadros, prateleiras, persianas e varal"
+						},
+						{
+							"incluidoEm": "Intermediário | Completo",
+							"servico": "Limpeza de caixa d'água até 3.000 litros"
+						},
+						{
+							"incluidoEm": "Intermediário | Completo",
+							"servico": "Mudança e remanejamento de móveis"
+						},
+						{
+							"incluidoEm": "Intermediário | Completo",
+							"servico": "Limpeza de ralos e sifões"
+						},
+						{
+							"incluidoEm": "Intermediário | Completo",
+							"servico": "Rejuntamento"
+						},
+						{
+							"incluidoEm": "Intermediário | Completo",
+							"servico": "Substituição de telhas"
+						},
+						{
+							"incluidoEm": "Completo",
+							"servico": "Reparo de eletrodomésticos (linha branca)"
+						},
+						{
+							"incluidoEm": "Completo",
+							"servico": "Reparo de eletroeletrônicos (linha marrom)"
+						},
+						{
+							"incluidoEm": "Completo",
+							"servico": "Descarte ecológico de móveis, eletrodomésticos, eletrônicos e entulho"
+						}
+					],
+					"nota": "",
+					"planos": "Básico | Intermediário | Completo",
+					"subtitulo": "Escolha o plano de assistência que melhor atende à sua rotina.",
+					"tag": "",
+					"titulo": "Assistência residencial 24h"
+				}
+			],
+			"textoBotao": "Solicite sua cotação",
+			"title": "Seguro Aluguel"
+		},
+		{
+			"aviso": "O registro deste produto na Susep não representa aprovação ou recomendação pela autarquia.",
+			"categoria": "residenciais",
+			"codigoProduto": "IMOBILIARIO",
+			"destaqueHome": false,
+			"faqs": [
+				{
+					"pergunta": "O Seguro Imobiliário é obrigatório?",
+					"resposta": "Sim. De acordo com a Lei do Inquilinato (Lei nº 8.245/1991), o Seguro Imobiliário é obrigatório em contratos de locação e cobre os prejuízos causados ao imóvel durante a vigência do contrato."
+				},
+				{
+					"pergunta": "O Tokio Marine Imobiliário é a mesma coisa que o Seguro Incêndio?",
+					"resposta": "Sim, é o mesmo seguro e garante proteção ao imóvel alugado e é item obrigatório, conforme a lei do inquilinato."
+				},
+				{
+					"pergunta": "Quando a cobertura começa a valer?",
+					"resposta": "A cobertura é instantânea. Assim que a contratação é finalizada, o imóvel já está protegido."
+				},
+				{
+					"pergunta": "O seguro cobre imóvel desocupado?",
+					"resposta": "Sim. O Seguro Imobiliário Tokio Marine oferece proteção ao imóvel mesmo quando ele estiver desocupado, garantindo que o patrimônio do proprietário nunca fique sem cobertura."
+				},
+				{
+					"pergunta": "Quais tipos de imóvel são aceitos?",
+					"resposta": "O seguro é aceito para imóveis residenciais, comerciais e industriais em todo o território nacional."
+				},
+				{
+					"pergunta": "Como acionar o seguro em caso de sinistro?",
+					"resposta": "Acesse o portal de sinistros da Tokio Marine ou ligue para 0800 31 86546. O atendimento está disponível 24h por dia."
+				}
+			],
+			"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-casa.svg",
+			"imagem": "http://www.tokiomarine.com.br:8080/documents/6797060/0/hero-imobiliario.png",
+			"linkBotao": "https://www.tokiomarine.com.br/cotacoes",
+			"ordem": 6,
+			"relacionados": [
+				"seguro-aluguel",
+				"seguro-residencial-premiado",
+				"seguro-auto"
+			],
+			"resumo": "Seguro incêndio para imóveis alugados, obrigatório pela Lei do Inquilinato, com assistência 24h.",
+			"rotulo": "SEGUROS RESIDENCIAIS",
+			"secoes": [
+				{
+					"itens": [
+						{
+							"descricao": "Cobertura básica do seguro. Proteção completa para a estrutura do imóvel e para os bens do inquilino contra incêndio, queda de raio e explosão. Pode ser estendida para incluir os bens dos moradores.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/0/Seguro Residencial Cobertura contra roubo.png",
+							"titulo": "Incêndio, Queda de Raio e Explosão"
+						},
+						{
+							"descricao": "Proteção para os bens do inquilino e para o imóvel em caso de roubo com arrombamento. Tranquilidade financeira depois de um momento difícil.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/0/hero-imobiliario.png",
+							"titulo": "Proteção opcional contra Roubo e Subtração de Bens"
+						},
+						{
+							"descricao": "Curto-circuito, variação de tensão e queda de raio podem danificar equipamentos e eletrodomésticos sem avisar. Esta cobertura garante indenização pelos prejuízos, podendo abranger também os bens dos moradores.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/0/Eletricista Seguro Residencial Tokio Marine.png",
+							"titulo": "Danos Elétricos"
+						},
+						{
+							"descricao": "Vendaval que arranca o telhado, granizo que quebra os vidros, tornado ou ciclone. Protege a estrutura da casa contra os principais eventos climáticos extremos, com possibilidade de cobertura para os bens dos moradores.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/0/pessoa-embaixo-de-temporal.png",
+							"titulo": "Eventos Climáticos — Vendaval e Granizo"
+						},
+						{
+							"descricao": "Indenização para perdas e danos em caso de quebra acidental desses itens, que além de bonitos são essenciais para o conforto do lar.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/0/pessoas-removendo-espelho.png",
+							"titulo": "Quebra de Vidros, Tampos de Mesa de Vidro, Espelhos, Mármores e Granitos"
+						},
+						{
+							"descricao": "Se o imóvel sofrer um sinistro coberto que impeça a sua ocupação, esta cobertura garante o pagamento das despesas de aluguel durante o período de recuperação. Proteção financeira para inquilinos, proprietários e imobiliárias.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/0/Seguro Residencial Contenção de despesas.png",
+							"titulo": "Despesas com Aluguel"
+						}
+					],
+					"subtitulo": "Monte a proteção ideal para imóveis residenciais ou comerciais. Escolha as coberturas que fazem sentido para você com possibilidade de incluir os bens dos moradores.",
+					"tag": "",
+					"titulo": "Coberturas disponíveis"
+				}
+			],
+			"segmentos": [
+				"voce",
+				"empresa"
+			],
+			"slug": "seguro-imobiliario",
+			"subtitulo": "Proteção completa para imóveis residenciais e comerciais com proteção também para os bens do inquilino.",
+			"tabelas": [
+				{
+					"linhas": [
+						{
+							"incluidoEm": "Essencial | Mais | Super",
+							"servico": "Chaveiro"
+						},
+						{
+							"incluidoEm": "Essencial | Mais | Super",
+							"servico": "Hidráulica"
+						},
+						{
+							"incluidoEm": "Essencial | Mais | Super",
+							"servico": "Eletricista"
+						},
+						{
+							"incluidoEm": "Mais | Super",
+							"servico": "Mudança e remanejamento de móveis"
+						},
+						{
+							"incluidoEm": "Mais | Super",
+							"servico": "Vidraceiro"
+						},
+						{
+							"incluidoEm": "Mais | Super",
+							"servico": "Desentupimento"
+						},
+						{
+							"incluidoEm": "Super",
+							"servico": "Cobertura provisória de telhados"
+						},
+						{
+							"incluidoEm": "Super",
+							"servico": "Revisão de instalação elétrica"
+						},
+						{
+							"incluidoEm": "Super",
+							"servico": "Troca de lâmpadas, tomadas e interruptores"
+						},
+						{
+							"incluidoEm": "Super",
+							"servico": "Verificação de possíveis vazamentos"
+						},
+						{
+							"incluidoEm": "Super",
+							"servico": "Fixação de quadros e prateleiras"
+						},
+						{
+							"incluidoEm": "Super",
+							"servico": "Substituição de telhas"
+						},
+						{
+							"incluidoEm": "Super",
+							"servico": "Troca ou instalação de chuveiros e duchas"
+						},
+						{
+							"incluidoEm": "Super",
+							"servico": "Instalação de ventilador de teto"
+						}
+					],
+					"nota": "",
+					"planos": "Essencial | Mais | Super",
+					"subtitulo": "Escolha o plano de assistência que melhor atende a sua necessidade",
+					"tag": "",
+					"titulo": "Assistência residencial 24h inclusa"
+				}
+			],
+			"textoBotao": "Cotar agora",
+			"title": "Seguro Imobiliário"
+		},
+		{
+			"aviso": "O registro deste produto na Susep não representa aprovação ou recomendação pela autarquia.",
+			"categoria": "residenciais",
+			"codigoProduto": "RESIDENCIAL",
+			"destaqueHome": true,
+			"faqs": [
+				{
+					"pergunta": "O que é o Seguro Residencial?",
+					"resposta": "O Seguro Residencial protege a sua casa contra imprevistos como incêndio, alagamento e roubo, e inclui assistência 24h para serviços como chaveiro e encanador, além de assistência veterinária para pets e sorteio mensal de R$ 10 mil. Válido para casas, apartamentos e unidades em condomínio em todo o Brasil."
+				},
+				{
+					"pergunta": "O que o Seguro Residencial Premiado cobre?",
+					"resposta": "As coberturas disponíveis incluem incêndio, danos elétricos, roubo com arrombamento, ruptura de tubulações, responsabilidade civil familiar, quebra de vidros e morte acidental. Você escolhe as coberturas que fazem sentido para a sua casa."
+				},
+				{
+					"pergunta": "O Seguro Residencial é caro?",
+					"resposta": "O custo médio representa até 0,2% do valor do seu patrimônio. Você paga pouco para proteger o que construiu."
+				},
+				{
+					"pergunta": "Como funciona o Seguro Residencial?",
+					"resposta": "Você escolhe as coberturas e os serviços de assistência, contrata online e seu imóvel já fica protegido. Se ocorrer um sinistro, basta acionar a Tokio Marine pelos nossos canais de atendimento para dar início à indenização."
+				},
+				{
+					"pergunta": "Como contratar o Seguro Residencial Premiado?",
+					"resposta": "Pelo site, pelo Super App Tokio Marine ou com o seu Corretor de Seguros. A contratação é online, personalizada, sem burocracia, e as parcelas são mensais sem juros."
+				},
+				{
+					"pergunta": "Qual é o melhor Seguro Residencial?",
+					"resposta": "O que se adapta à sua necessidade. Na Tokio Marine, você escolhe coberturas, assistências e forma de pagamento, com parcelas mensais sem juros no cartão, débito em conta ou boleto."
+				},
+				{
+					"pergunta": "O Seguro Residencial Tokio Marine é confiável?",
+					"resposta": "Mais de 300 mil clientes escolheram a Tokio Marine para proteger o seu lar. Coberturas personalizadas, indenização rápida e atendimento 24h em todo o Brasil."
+				},
+				{
+					"pergunta": "Posso contratar para imóvel alugado?",
+					"resposta": "Com certeza. O seguro é ideal tanto para proprietários quanto para inquilinos que desejam proteger seus bens e garantir assistência 24h."
+				},
+				{
+					"pergunta": "Quais tipos de imóvel são aceitos?",
+					"resposta": "Casas, apartamentos e unidades em condomínio, próprios ou alugados, em qualquer estado do Brasil."
+				},
+				{
+					"pergunta": "Meu condomínio tem seguro. Ainda preciso do Seguro Residencial?",
+					"resposta": "Sim. O seguro do condomínio cobre a estrutura do prédio, mas não protege os seus bens como móveis, eletrodomésticos e eletrônicos. O Seguro Residencial Premiado complementa essa proteção e ainda inclui assistência 24h e sorteio mensal de R$ 10 mil."
+				}
+			],
+			"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-casa.svg",
+			"imagem": "http://www.tokiomarine.com.br:8080/documents/6797060/0/residencialLP (1).png",
+			"linkBotao": "https://servicos.tokiomarine.com.br/massificados/cotador-rd-ot-digital/#/partner/home",
+			"ordem": 7,
+			"relacionados": [
+				"seguro-auto",
+				"seguro-vida",
+				"seguro-aluguel"
+			],
+			"resumo": "Coberturas personalizadas contra incêndio, danos elétricos e roubo, com assistência 24h e sorteio mensal de R$ 10 mil.",
+			"rotulo": "SEGUROS RESIDENCIAIS",
+			"secoes": [
+				{
+					"itens": [
+						{
+							"descricao": "Mais de 28 toneladas de móveis, eletrônicos e eletrodomésticos descartados de forma responsável em 2025. Agende a retirada e a Tokio Marine cuida do resto.",
+							"icone": null,
+							"titulo": "Descarte Ecológico | Plano VIP"
+						},
+						{
+							"descricao": "Orientações práticas para reduzir o consumo de água e energia elétrica na sua residência.",
+							"icone": null,
+							"titulo": "Consultoria de Economia | Plano VIP"
+						},
+						{
+							"descricao": "Manutenção preventiva para quem investe em energia limpa. A limpeza das placas é agendada e realizada pela equipe Tokio Marine.",
+							"icone": null,
+							"titulo": "Limpeza de Placa Solar | Plano VIP"
+						},
+						{
+							"descricao": "Todos os documentos disponíveis nos canais digitais: portal do cliente, app, site e WhatsApp.",
+							"icone": null,
+							"titulo": "Sem papel, sem burocracia"
+						},
+						{
+							"descricao": "Parcelas mensais sem juros.",
+							"icone": null,
+							"titulo": "Pagamento facilitado"
+						}
+					],
+					"subtitulo": "O Residencial Premiado vai além da proteção e contribui com o meio ambiente.",
+					"tag": "",
+					"titulo": "Bom para o seu lar. Bom para o planeta."
+				}
+			],
+			"segmentos": [
+				"voce"
+			],
+			"slug": "seguro-residencial-premiado",
+			"subtitulo": "Use o cupom CLIENTE10",
+			"tabelas": [
+				{
+					"linhas": [
+						{
+							"incluidoEm": "Básico | Especial | VIP",
+							"servico": "Chaveiro"
+						},
+						{
+							"incluidoEm": "Básico | Especial | VIP",
+							"servico": "Encanador"
+						},
+						{
+							"incluidoEm": "Básico | Especial | VIP",
+							"servico": "Eletricista"
+						},
+						{
+							"incluidoEm": "Básico | Especial | VIP",
+							"servico": "Desentupimento"
+						},
+						{
+							"incluidoEm": "Básico | Especial | VIP",
+							"servico": "Vidraceiro"
+						},
+						{
+							"incluidoEm": "Básico | Especial | VIP",
+							"servico": "Help Desk"
+						},
+						{
+							"incluidoEm": "Especial | VIP",
+							"servico": "Reparo de eletrodomésticos e eletrônicos"
+						},
+						{
+							"incluidoEm": "Especial | VIP",
+							"servico": "Limpeza de Calhas (exclusivo casas)"
+						},
+						{
+							"incluidoEm": "Especial | VIP",
+							"servico": "Limpeza de Ralos e Sifões"
+						},
+						{
+							"incluidoEm": "Especial | VIP",
+							"servico": "Limpeza de Caixa D'água (exclusivo casas)"
+						},
+						{
+							"incluidoEm": "VIP",
+							"servico": "Limpeza de Filtros de Ar-Condicionado"
+						},
+						{
+							"incluidoEm": "VIP",
+							"servico": "Caçamba"
+						},
+						{
+							"incluidoEm": "VIP",
+							"servico": "Descarte Ecológico"
+						},
+						{
+							"incluidoEm": "VIP",
+							"servico": "Limpeza de Placa Solar"
+						}
+					],
+					"nota": "",
+					"planos": "Básico | Especial | VIP",
+					"subtitulo": "",
+					"tag": "",
+					"titulo": "Escolha o plano de assistência que combina com a sua casa. 7 em cada 10 clientes aprovam os nossos serviços."
+				},
+				{
+					"linhas": [
+						{
+							"incluidoEm": "Pet Sossego | Pet Conforto | Pet Total",
+							"servico": "Telemedicina Veterinária"
+						},
+						{
+							"incluidoEm": "Pet Sossego | Pet Conforto | Pet Total",
+							"servico": "Consulta Veterinária Urgência / Emergência"
+						},
+						{
+							"incluidoEm": "Pet Sossego | Pet Conforto | Pet Total",
+							"servico": "Transporte Emergencial"
+						},
+						{
+							"incluidoEm": "Pet Sossego | Pet Conforto | Pet Total",
+							"servico": "Funeral Pet Individual"
+						},
+						{
+							"incluidoEm": "Pet Sossego | Pet Conforto | Pet Total",
+							"servico": "Hospedagem em caso de hospitalização do tutor"
+						},
+						{
+							"incluidoEm": "Pet Sossego | Pet Conforto | Pet Total",
+							"servico": "Consulta Eletiva"
+						},
+						{
+							"incluidoEm": "Pet Sossego | Pet Conforto | Pet Total",
+							"servico": "Serviços de Concierge"
+						},
+						{
+							"incluidoEm": "Pet Sossego | Pet Conforto | Pet Total",
+							"servico": "Orientação de Vacina"
+						},
+						{
+							"incluidoEm": "Pet Conforto | Pet Total",
+							"servico": "Exames Laboratoriais"
+						},
+						{
+							"incluidoEm": "Pet Total",
+							"servico": "Exame de Imagem"
+						}
+					],
+					"nota": "",
+					"planos": "Pet Sossego | Pet Conforto | Pet Total",
+					"subtitulo": "Consultas, exames, telemedicina e muito mais para cães e gatos de todas as raças, idades ou tamanhos.",
+					"tag": "Assistência Pet",
+					"titulo": "Proteção para cães e gatos"
+				}
+			],
+			"textoBotao": "Contrate online",
+			"title": "Seguro Residencial Premiado"
+		},
+		{
+			"aviso": "O registro deste produto na Susep não representa aprovação ou recomendação pela autarquia.",
+			"categoria": "vida",
+			"codigoProduto": "VIDA",
+			"destaqueHome": true,
+			"faqs": [
+				{
+					"pergunta": "O que o Seguro Vida Individual cobre?",
+					"resposta": "O seguro cobre morte por qualquer causa, doenças graves, diária de internação, invalidez permanente por acidente e morte acidental. Também inclui telemedicina Einstein 24h e o Programa Vida Saudável sem custo adicional."
+				},
+				{
+					"pergunta": "Quando posso usar os benefícios em vida?",
+					"resposta": "A telemedicina Einstein e o Programa Vida Saudável estão disponíveis desde a contratação. A cobertura de doenças graves tem carência de apenas 7 dias."
+				},
+				{
+					"pergunta": "A telemedicina cobre só o segurado?",
+					"resposta": "Não. O Einstein Conecta está disponível para o segurado e mais duas pessoas, sem custo adicional. O atendimento funciona 24h por dia, por celular ou computador."
+				},
+				{
+					"pergunta": "O Seguro de Vida substitui o plano de saúde?",
+					"resposta": "Não. O Seguro Vida Individual complementa o plano de saúde. A telemedicina Einstein cobre orientações e prescrições para sintomas comuns. Exames e consultas com especialistas não estão incluídos nesse serviço."
+				},
+				{
+					"pergunta": "Como contratar o Seguro Vida Individual?",
+					"resposta": "Pelo site, pelo Super App Tokio Marine ou com o seu Corretor de Seguros. A contratação é online e o seguro entra em vigor assim que o pagamento é confirmado."
+				},
+				{
+					"pergunta": "Como funciona a assistência médica online?",
+					"resposta": "A Tokio Marine oferece atendimento médico online 24 horas, para que você receba orientação e apoio médico de onde estiver, com toda praticidade que você precisa."
+				}
+			],
+			"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-coracao.svg",
+			"imagem": "http://www.tokiomarine.com.br:8080/documents/6797060/0/Seguro de Viagem Individual Tokio Marine (1).png",
+			"linkBotao": "https://servicos.tokiomarine.com.br/sva/view/digital/vida-individual/individual/cotacoes",
+			"ordem": 8,
+			"relacionados": [
+				"seguro-funeral",
+				"seguro-residencial-premiado",
+				"seguro-auto"
+			],
+			"resumo": "Coberturas abrangentes com benefícios que você pode usar em vida.",
+			"rotulo": "SEGUROS DE VIDA",
+			"secoes": [
+				{
+					"itens": [
+						{
+							"descricao": "Diagnóstico de câncer, infarto ou outras doenças graves muda tudo. O seguro paga uma indenização para você reorganizar a vida — sem depender da recuperação para receber. Carência de apenas 7 dias.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-escudo.svg",
+							"titulo": "Cobertura para até 30 doenças graves"
+						},
+						{
+							"descricao": "Acesso direto ao Einstein Conecta, serviço do Hospital Albert Einstein. Atendimento por celular ou computador, a qualquer hora, sem espera. Prescrição de medicamentos por e-mail. Disponível para você e mais dois dependentes, sem custo adicional.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-carro.svg",
+							"titulo": "Telemedicina Einstein 24h — para você e mais duas pessoas"
+						},
+						{
+							"descricao": "Plataforma 100% digital com orientação de especialistas em psicologia, nutrição, atividade física, movimento sem dor e qualidade do sono. Você cuida da saúde antes de precisar do seguro.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-coracao.svg",
+							"titulo": "Programa Vida Saudável — saúde física e mental no mesmo lugar"
+						},
+						{
+							"descricao": "Se você precisar ser internado, o seguro paga diárias para cobrir os custos que o plano de saúde não cobre. Menos preocupação financeira no momento mais difícil.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-ambulancia.svg",
+							"titulo": "Diárias de internação"
+						},
+						{
+							"descricao": "Proteção completa com um valor que cabe no orçamento. Quanto antes você contrata, menor o custo e maior a cobertura acumulada ao longo da vida.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-dollar.svg",
+							"titulo": "A partir de R$ 10 por mês"
+						}
+					],
+					"subtitulo": "Um seguro de vida que vai além da proteção financeira.",
+					"tag": "",
+					"titulo": "Diferenciais"
+				},
+				{
+					"itens": [
+						{
+							"descricao": "Em caso de falecimento, o seguro de vida oferece um suporte financeiro rápido para a família. Como a indenização não entra em inventário, o valor pode ser liberado com mais agilidade pela Tokio.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819014/funeral-familia-brasileira-costas-velorio.png",
+							"titulo": "Indenização rápida"
+						},
+						{
+							"descricao": "Em caso de diagnóstico de câncer e de até 30 doenças graves, de acordo com o combo contratado, você receberá a indenização para realizar o tratamento.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/0/Diagnóstico de doenças graves seguro de vida tokio marine seguradora.png",
+							"titulo": "Diagnóstico de câncer e doenças graves"
+						},
+						{
+							"descricao": "Indenização por internação hospitalar decorrente de doença ou acidente para até 100 diárias por ano. Assim, garantimos segurança, tranquilidade e proteção para você se recuperar completamente e voltar para sua rotina.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/0/Diárias de internação seguro de vida tokio marine.png",
+							"titulo": "Diárias de Internação"
+						},
+						{
+							"descricao": "Oferece serviços de assistência funeral com limite de capital personalizado, de acordo com seu perfil, de R$ 5 mil a R$ 20 mil. É um apoio fundamental em um dos momentos mais delicados da sua vida.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/0/Assistência funeral seguro de vida tokio marine.png",
+							"titulo": "Serviço de Assistência Funeral"
+						},
+						{
+							"descricao": "Reembolso de despesas médicas, hospitalares e odontológicas em decorrência de acidente. Proporciona tranquilidade financeiras em momentos difíceis.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819014/hospital-visita-familia-brasileira-feliz.png",
+							"titulo": "Cobertura de Despesas Médicas Hospitalares"
+						},
+						{
+							"descricao": "Disponível para quem contrata a cobertura de Diagnóstico de Câncer ou Doenças Graves.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819014/pessoa-em-consulta-medica.png",
+							"titulo": "2ª Opinião Médica sem custo adicional"
+						},
+						{
+							"descricao": "Ele analisa como o seu DNA reage a remédios. Isso ajuda médicos a escolherem o remédio certo para você. O objetivo é ter tratamentos melhores com menos efeitos colaterais.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/0/Teste de farmácia tokio marine seguro de vida.png",
+							"titulo": "Teste Farmaconegético sem custos"
+						}
+					],
+					"subtitulo": "Proteção para os momentos que mais importam.",
+					"tag": "",
+					"titulo": "Coberturas disponíveis"
+				},
+				{
+					"itens": [
+						{
+							"descricao": "Descontos exclusivos na compra de ingressos para shows e eventos no Tokio Marine Hall.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-escudo.svg",
+							"titulo": "Tokio Marine Hall"
+						},
+						{
+							"descricao": "Programa de benefícios com descontos em centenas de parceiros em diversas categorias.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-carro.svg",
+							"titulo": "Tokio Indica"
+						}
+					],
+					"subtitulo": "Vantagens exclusivas para o seu dia a dia.",
+					"tag": "",
+					"titulo": "Benefícios exclusivos para Segurados"
+				}
+			],
+			"segmentos": [
+				"voce"
+			],
+			"slug": "seguro-vida",
+			"subtitulo": "Proteção para a sua família. Benefícios que você usa hoje.",
+			"tabelas": [],
+			"textoBotao": "Contrate online",
+			"title": "Seguro Vida"
+		},
+		{
+			"aviso": "O registro deste produto na Susep não representa aprovação ou recomendação pela autarquia.",
+			"categoria": "vida",
+			"codigoProduto": "VIDA",
+			"destaqueHome": false,
+			"faqs": [
+				{
+					"pergunta": "Como acionar o benefício?",
+					"resposta": "O benefício está disponível através do site conecta.einstein.br ou aplicativo Meu Einstein disponível nas lojas App Store ou Play Store. Conectado à internet, acesse o Meu Einstein pelo site conecta.einstein.br ou pelo aplicativo Meu Einstein. Na área de login, clique no botão “Cadastrar-se” (no site é preciso clicar no botão “Login” para acessar a área). Preencha os dados solicitados, marque a opção “Concluir”. Você receberá um e-mail para ativar a conta."
+				},
+				{
+					"pergunta": "Passo a passo para agendamento",
+					"resposta": "Ao clicar no botão Telemedicina Saúde e Bem-Estar, o Segurado será direcionado para informar alguns dados. Após o preenchimento do questionário, o Segurado deverá aguardar o contato do Teleorientador de Vida Saudável para agendamento da tele consulta, em até 72 horas. O Segurado será atendido pelo Teleorientador de Vida Saudável e deverá ser direcionado ao Programa de acordo sua necessidade, desde que o seguro esteja ativo e vigente. Após o contato, o paciente irá receber a confirmação do agendamento por E-mail e WhatsApp."
+				},
+				{
+					"pergunta": "Condições do programa",
+					"resposta": "O Programa Vida Saudável é um serviço do pacote de benefícios do Seguro Tokio Marine Vida Individual e Vida Individual Sênior sem custo adicional que se restringe à orientação através de profissionais especialistas, sem atendimento presencial. O serviço será disponibilizado pelo período de 12 meses, a partir do início de vigência da apólice. Para seguros vigentes será disponibilizado pelo período de 12 meses, a partir do envio da comunicação aos Segurados. Após esse período, ficará a critério da Seguradora a permanência do pacote de benefícios. O segurado não poderá acionar vários programas de forma simultânea. A repetição de um mesmo programa somente poderá ocorrer a cada 12 meses. Os serviços serão executados de segunda a sexta-feira, das 07h às 20h. Consulte a periodicidade de cada programa e limite de utilização no Guia de Serviços. Para mais informações sobre o pacote de benefícios do Segurado Vida Individual Tokio Marine ligue 0800 31 86546. Carência de 7 dias."
+				},
+				{
+					"pergunta": "O que é Telemedicida? Entenda como funciona.",
+					"resposta": "A Telemedicina é um serviço de orientação médica on-line 24 horas por dia, sete dias por semana, que oferece atendimento médico pelo celular ou computador. Você recebe orientações médicas sem sair de casa, evitando a exposição em ambiente hospitalar."
+				},
+				{
+					"pergunta": "O que é uma tele-entrevista?",
+					"resposta": "A tele-entrevista é uma entrevista médica realizada por telefone, por profissionais especializados, de forma segura e confidencial. As entrevistas telefônicas evitam o preenchimento de propostas e questionário, tornando a contratação mais rápida. São realizadas confirmações de dados pessoais, interesse na contratação do Seguro e confirmação da indicação de beneficiários."
+				},
+				{
+					"pergunta": "O Seguro de vida só é usado em caso de falecimento?",
+					"resposta": "Não. Atualmente existem muitas coberturas com indenização em vida. No Seguro da Tokio Vida Homem, por exemplo, além das coberturas básicas, há coberturas que indenizam o próprio Segurado em caso de diagnóstico de câncer de próstata e testículos, doenças graves, diárias de internação hospitalar e invalidez por acidente."
+				},
+				{
+					"pergunta": "Quem posso escolher para ser o beneficiário? E se não houver beneficiário?",
+					"resposta": "Poderão ser indicadas quaisquer pessoas como beneficiários na hora da contratação, sendo familiares ou não, e sendo possível a alteração sempre que desejar. Em caso de não haver a indicação de um beneficiário a indenização ocorrerá conforme definido pela lei: metade para o cônjuge não separado judicialmente e o restante dividido entre os herdeiros do Segurado, seguindo a vocação hereditária."
+				}
+			],
+			"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-coracao.svg",
+			"imagem": "http://www.tokiomarine.com.br:8080/documents/6797060/0/hero-vida-homem.png",
+			"linkBotao": "https://servicos.tokiomarine.com.br/sva/view/digital/vida-individual/individual/cotacoes",
+			"ordem": 9,
+			"relacionados": [
+				"seguro-vida",
+				"seguro-funeral",
+				"seguro-auto"
+			],
+			"resumo": "Proteção pensada para a saúde do homem, com telemedicina para você e mais duas pessoas.",
+			"rotulo": "SEGUROS DE VIDA",
+			"secoes": [
+				{
+					"itens": [
+						{
+							"descricao": "",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-estetoscopio.svg",
+							"titulo": "Excelência em atendimento do Hospital Albert Einstein"
+						},
+						{
+							"descricao": "",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-relogio.svg",
+							"titulo": "Atendimento 24 horas, 7 dias por semana"
+						},
+						{
+							"descricao": "",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6630007/6640063/icone-celular.svg",
+							"titulo": "Pelo celular ou computador"
+						},
+						{
+							"descricao": "",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-ambulancia.svg",
+							"titulo": "Pronto atendimento sem espera"
+						},
+						{
+							"descricao": "",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-mail.svg",
+							"titulo": "Prescrição de medicamentos por e-mail"
+						}
+					],
+					"subtitulo": "O serviço de orientação médica on-line para garantir a sua saúde e bem-estar.",
+					"tag": "",
+					"titulo": "Serviço de telemedicina para você e mais duas pessoas."
+				},
+				{
+					"itens": [
+						{
+							"descricao": "",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-coracao-aperto-de-mao.svg",
+							"titulo": "Teleorientação Psicológica"
+						},
+						{
+							"descricao": "",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-estetoscopio.svg",
+							"titulo": "Teleorientação Nutricional"
+						},
+						{
+							"descricao": "",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-halter.svg",
+							"titulo": "Teleorientação Atividade Física"
+						},
+						{
+							"descricao": "",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6630007/6640063/icone-coracao.svg",
+							"titulo": "Teleorientação Movimento sem Dor"
+						},
+						{
+							"descricao": "",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-cama.svg",
+							"titulo": "Teleorientação Sono com Qualidade"
+						}
+					],
+					"subtitulo": "Serviço 100% digital, no aplicativo ou computador, com profissionais especialistas.",
+					"tag": "",
+					"titulo": "Pacote De Benefícios Da Tokio Marine"
+				},
+				{
+					"itens": [
+						{
+							"descricao": "Se você tiver mais dúvidas sobre o Seguro Vida acesse nossas condições gerais.",
+							"icone": null,
+							"titulo": "Tem dúvidas sobre o Seguro Vida Tokio Marine?"
+						}
+					],
+					"subtitulo": "",
+					"tag": "",
+					"titulo": "Destaques"
+				}
+			],
+			"segmentos": [
+				"voce"
+			],
+			"slug": "seguro-vida-homem",
+			"subtitulo": "Aproveite os melhores momentos protegendo o que mais importa: a vida.",
+			"tabelas": [],
+			"textoBotao": "Cotar seguro",
+			"title": "Seguro Vida Homem"
+		},
+		{
+			"aviso": "O registro deste produto na Susep não representa aprovação ou recomendação pela autarquia.",
+			"categoria": "vida",
+			"codigoProduto": "FUNERAL",
+			"destaqueHome": false,
+			"faqs": [
+				{
+					"pergunta": "O Seguro Funeral+ é diferente de um plano funerário comum?",
+					"resposta": "Sim. Além da assistência completa, incluímos suporte para testamento, inventário e compra de jazigo. É uma solução de planejamento futuro, não apenas um serviço funerário."
+				},
+				{
+					"pergunta": "Quem pode contratar o Seguro Funeral+?",
+					"resposta": "Qualquer pessoa física. O seguro pode ser contratado para cônjuge e dependentes, conforme as condições da apólice."
+				}
+			],
+			"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-coracao.svg",
+			"imagem": "http://www.tokiomarine.com.br:8080/documents/6797060/0/hero-seguro-funeral.png",
+			"linkBotao": "https://servicos.tokiomarine.com.br/sva/view/digital/vida-individual/seguro-funeral/cotacoes",
+			"ordem": 10,
+			"relacionados": [
+				"seguro-vida",
+				"seguro-residencial-premiado",
+				"seguro-auto"
+			],
+			"resumo": "Planeje agora e proteja sua família quando ela mais precisar.",
+			"rotulo": "SEGUROS DE VIDA",
+			"secoes": [
+				{
+					"itens": [
+						{
+							"descricao": "Plataforma digital para criar a minuta do testamento e simular o inventário. Você registra suas vontades em vida. A partilha de bens fica mais clara. Os custos com impostos relacionados à transmissão de documentos.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-laptop.svg",
+							"titulo": "Testamento e Inventário Digital"
+						},
+						{
+							"descricao": "Apoio especializado para adquirir o jazigo. Menos burocracia, sem impacto financeiro inesperado.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-fone-de-ouvido.svg",
+							"titulo": "Suporte para Jazigo"
+						},
+						{
+							"descricao": "Uma equipe especializada cuida de todos os trâmites do processo, do início até o sepultamento ou cremação. Sua família não precisa se preocupar com nenhum detalhe operacional.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-coracao.svg",
+							"titulo": "Assistência funeral completa"
+						},
+						{
+							"descricao": "Faça tudo pelo site ou Super App. O pagamento mensal é simplificado e não pesa no seu orçamento.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-celular.svg",
+							"titulo": "Contratação 100% digital, menos de R$ 1 por dia"
+						}
+					],
+					"subtitulo": "O que o Seguro Funeral+ oferece além da assistência funeral?",
+					"tag": "BENEFÍCIOS",
+					"titulo": "Diferenciais"
+				},
+				{
+					"itens": [
+						{
+							"descricao": "Indenização para amparar os beneficiários e ajudar a organizar as despesas no período de luto.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/0/seguro funeral (2).png",
+							"titulo": "Indenização por Morte"
+						},
+						{
+							"descricao": "Cobertura até o limite do capital contratado para a aquisição do jazigo, com assistência especializada para a família.",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/0/seguro funeral (3).png",
+							"titulo": "Aquisição de Jazigo"
+						}
+					],
+					"subtitulo": "Proteção financeira para os momentos mais difíceis.",
+					"tag": "",
+					"titulo": "Coberturas"
+				}
+			],
+			"segmentos": [
+				"voce"
+			],
+			"slug": "seguro-funeral",
+			"subtitulo": "Planeje agora. Proteja sua família quando ela mais precisar.",
+			"tabelas": [],
+			"textoBotao": "Contrate online",
+			"title": "Seguro Funeral"
+		},
+		{
+			"aviso": "O registro deste produto na Susep não representa aprovação ou recomendação pela autarquia.",
+			"categoria": "vida",
+			"codigoProduto": "VIDA",
+			"destaqueHome": false,
+			"faqs": [],
+			"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-coracao.svg",
+			"imagem": "http://www.tokiomarine.com.br:8080/documents/6797060/0/img_23.png",
+			"linkBotao": "https://cotacoes.tokiomarine.com.br/sva/view/digital/vida-individual/individual/cotacoes",
+			"ordem": 11,
+			"relacionados": [
+				"seguro-vida",
+				"seguro-funeral",
+				"seguro-residencial-premiado"
+			],
+			"resumo": "Proteção para a mulher em todas as fases da vida, com telemedicina e coberturas para doenças graves.",
+			"rotulo": "SEGUROS DE VIDA",
+			"secoes": [
+				{
+					"itens": [
+						{
+							"descricao": "Saiba mais",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/0/ChatGPT Image 2_05_2026, 21_25_31 (2).png",
+							"titulo": "SEGURO VIDA INDIVIDUAL HOMEM"
+						},
+						{
+							"descricao": "Saiba mais",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/0/ChatGPT Image 2_05_2026, 21_27_50.png",
+							"titulo": "SEGURO VIDA INDIVIDUAL MULHER"
+						},
+						{
+							"descricao": "Saiba mais",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/0/ChatGPT Image 2_05_2026, 21_31_00.png",
+							"titulo": "SEGURO VIDA INDIVIDUAL SÊNIOR"
+						}
+					],
+					"subtitulo": "",
+					"tag": "",
+					"titulo": "Destaques"
+				}
+			],
+			"segmentos": [
+				"voce"
+			],
+			"slug": "seguro-vida-mulher",
+			"subtitulo": "Proteja o que mais importa: a vida",
+			"tabelas": [],
+			"textoBotao": "COTAR SEGURO",
+			"title": "Seguro Vida Mulher"
+		},
+		{
+			"aviso": "O registro deste produto na Susep não representa aprovação ou recomendação pela autarquia.",
+			"categoria": "vida",
+			"codigoProduto": "VIDA",
+			"destaqueHome": false,
+			"faqs": [
+				{
+					"pergunta": "Como acionar o benefício?",
+					"resposta": "O benefício está disponível através do site conecta.einstein.br ou aplicativo Meu Einstein disponível nas lojas App Store ou Play Store. Conectado à internet, acesse o Meu Einstein pelo site conecta.einstein.br ou pelo aplicativo Meu Einstein. Na área de login, clique no botão “Cadastrar-se” (no site é preciso clicar no botão “Login” para acessar a área). Preencha os dados solicitados, marque a opção “Concluir”. Você receberá um e-mail para ativar a conta."
+				},
+				{
+					"pergunta": "Passo a passo para agendamento",
+					"resposta": "Ao clicar no botão Telemedicina Saúde e Bem-Estar, o Segurado será direcionado para informar alguns dados. Após o preenchimento do questionário, o Segurado deverá aguardar o contato do Teleorientador de Vida Saudável para agendamento da tele consulta, em até 72 horas. O Segurado será atendido pelo Teleorientador de Vida Saudável e deverá ser direcionado ao Programa de acordo sua necessidade, desde que o seguro esteja ativo e vigente. Após o contato, o paciente irá receber a confirmação do agendamento por E-mail e WhatsApp."
+				},
+				{
+					"pergunta": "Condições do programa",
+					"resposta": "O Programa Vida Saudável é um serviço do pacote de benefícios do Seguro Tokio Marine Vida Individual e Vida Individual Sênior sem custo adicional que se restringe à orientação através de profissionais especialistas, sem atendimento presencial. O serviço será disponibilizado pelo período de 12 meses, a partir do início de vigência da apólice. Para seguros vigentes será disponibilizado pelo período de 12 meses, a partir do envio da comunicação aos Segurados. Após esse período, ficará a critério da Seguradora a permanência do pacote de benefícios. O segurado não poderá acionar vários programas de forma simultânea. A repetição de um mesmo programa somente poderá ocorrer a cada 12 meses. Os serviços serão executados de segunda a sexta-feira, das 07h às 20h. Consulte a periodicidade de cada programa e limite de utilização no Guia de Serviços. Para mais informações sobre o pacote de benefícios do Segurado Vida Individual Tokio Marine ligue 0800 31 86546. Carência de 7 dias."
+				},
+				{
+					"pergunta": "O que é Telemedicida? Entenda como funciona.",
+					"resposta": "A Telemedicina é um serviço de orientação médica on-line 24 horas por dia, sete dias por semana, que oferece atendimento médico pelo celular ou computador. Você recebe orientações médicas sem sair de casa, evitando a exposição em ambiente hospitalar."
+				},
+				{
+					"pergunta": "O que é uma tele-entrevista?",
+					"resposta": "A tele-entrevista é uma entrevista médica realizada por telefone, por profissionais especializados, de forma segura e confidencial. As entrevistas telefônicas evitam o preenchimento de propostas e questionário, tornando a contratação mais rápida. São realizadas confirmações de dados pessoais, interesse na contratação do Seguro e confirmação da indicação de beneficiários."
+				},
+				{
+					"pergunta": "O Seguro de vida só é usado em caso de falecimento?",
+					"resposta": "Não. Atualmente existem muitas coberturas com indenização em vida. No Seguro da Tokio Vida Homem, por exemplo, além das coberturas básicas, há coberturas que indenizam o próprio Segurado em caso de diagnóstico de câncer de próstata e testículos, doenças graves, diárias de internação hospitalar e invalidez por acidente."
+				},
+				{
+					"pergunta": "Quem posso escolher para ser o beneficiário? E se não houver beneficiário?",
+					"resposta": "Poderão ser indicadas quaisquer pessoas como beneficiários na hora da contratação, sendo familiares ou não, e sendo possível a alteração sempre que desejar. Em caso de não haver a indicação de um beneficiário a indenização ocorrerá conforme definido pela lei: metade para o cônjuge não separado judicialmente e o restante dividido entre os herdeiros do Segurado, seguindo a vocação hereditária."
+				}
+			],
+			"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-coracao.svg",
+			"imagem": "http://www.tokiomarine.com.br:8080/documents/6797060/0/hero-vida-senior.png",
+			"linkBotao": "https://servicos.tokiomarine.com.br/sva/view/digital/vida-individual/individual/cotacoes",
+			"ordem": 12,
+			"relacionados": [
+				"seguro-vida",
+				"seguro-funeral",
+				"seguro-residencial-premiado"
+			],
+			"resumo": "No melhor momento da vida, você e sua família protegidos, com telemedicina e benefícios exclusivos.",
+			"rotulo": "SEGUROS DE VIDA",
+			"secoes": [
+				{
+					"itens": [
+						{
+							"descricao": "",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-estetoscopio.svg",
+							"titulo": "Excelência em atendimento do Hospital Albert Einstein"
+						},
+						{
+							"descricao": "",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-relogio.svg",
+							"titulo": "Atendimento 24 horas, 7 dias por semana"
+						},
+						{
+							"descricao": "",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6630007/6640063/icone-celular.svg",
+							"titulo": "Pelo celular ou computador"
+						},
+						{
+							"descricao": "",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-ambulancia.svg",
+							"titulo": "Pronto atendimento sem espera"
+						},
+						{
+							"descricao": "",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-comprimidos.svg",
+							"titulo": "Prescrição de medicamentos por e-mail"
+						}
+					],
+					"subtitulo": "O serviço de orientação médica on-line para garantir a sua saúde e bem-estar.",
+					"tag": "",
+					"titulo": "Serviço de telemedicina para você e mais duas pessoas."
+				},
+				{
+					"itens": [
+						{
+							"descricao": "",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-coracao-aperto-de-mao.svg",
+							"titulo": "Teleorientação Psicológica"
+						},
+						{
+							"descricao": "",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-estetoscopio.svg",
+							"titulo": "Teleorientação Nutricional"
+						},
+						{
+							"descricao": "",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-halter.svg",
+							"titulo": "Teleorientação Atividade Física"
+						},
+						{
+							"descricao": "",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6630007/6640063/icone-coracao.svg",
+							"titulo": "Teleorientação Movimento sem Dor"
+						},
+						{
+							"descricao": "",
+							"icone": "http://www.tokiomarine.com.br:8080/documents/6797060/6819004/icone-cama.svg",
+							"titulo": "Teleorientação Sono com Qualidade"
+						}
+					],
+					"subtitulo": "Serviço 100% digital, no aplicativo ou computador, com profissionais especialistas.",
+					"tag": "",
+					"titulo": "Pacote De Benefícios Da Tokio Marine"
+				},
+				{
+					"itens": [
+						{
+							"descricao": "Se você tiver mais dúvidas sobre o Seguro Vida acesse nossas condições gerais.",
+							"icone": null,
+							"titulo": "Tem dúvidas sobre o Seguro Vida Tokio Marine?"
+						}
+					],
+					"subtitulo": "",
+					"tag": "",
+					"titulo": "Destaques"
+				}
+			],
+			"segmentos": [
+				"voce"
+			],
+			"slug": "seguro-vida-senior",
+			"subtitulo": "No melhor momento da vida, você e sua família sem preocupações.",
+			"tabelas": [],
+			"textoBotao": "Cotar seguro",
+			"title": "Seguro Vida Sênior"
+		}
+	]
+}

@@ -1,0 +1,5 @@
+.tm-produto-relacionados__more {
+	color: var(--tm-green, #006551);
+	font-weight: 600;
+	margin-top: auto;
+}

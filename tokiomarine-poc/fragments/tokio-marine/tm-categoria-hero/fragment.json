@@ -1,0 +1,9 @@
+{
+	"configurationPath": "configuration.json",
+	"cssPath": "index.css",
+	"fragmentEntryKey": "tm-categoria-hero",
+	"htmlPath": "index.html",
+	"icon": "picture",
+	"name": "Tokio - Categoria: Hero",
+	"type": "component"
+}

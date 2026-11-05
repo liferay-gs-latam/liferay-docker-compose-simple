@@ -1,0 +1,8 @@
+{
+	"cssPath": "index.css",
+	"fragmentEntryKey": "tm-base",
+	"htmlPath": "index.html",
+	"icon": "paint-sampler",
+	"name": "Tokio - Estilos Base",
+	"type": "component"
+}

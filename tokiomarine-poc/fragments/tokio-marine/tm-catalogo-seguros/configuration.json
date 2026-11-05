@@ -1,0 +1,20 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"defaultValue": "Seguros para você e para sua empresa",
+					"label": "Título",
+					"name": "titulo",
+					"type": "text"
+				},
+				{
+					"defaultValue": "Conheça todos os seguros Tokio Marine, organizados por categoria.",
+					"label": "Subtítulo",
+					"name": "subtitulo",
+					"type": "text"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,73 @@
+[#assign siteURL = themeDisplay.getPathFriendlyURLPublic() + themeDisplay.getScopeGroup().getFriendlyURL() /]
+
+[#function tmFetch path]
+	[#attempt]
+		[#local response = restClient.get(path) /]
+
+		[#if response?is_string]
+			[#local response = response?eval_json /]
+		[/#if]
+
+		[#return response /]
+	[#recover]
+		[#return {} /]
+	[/#attempt]
+[/#function]
+
+[#function tmImage document]
+	[#if document?? && document?is_hash && document.file?? && document.file.fileURL??]
+		[#return document.file.fileURL?keep_before("&imageThumbnail") /]
+	[/#if]
+
+	[#return "" /]
+[/#function]
+
+[#assign produtoId = "" /]
+
+[#if produtoObject??]
+	[#assign produtoId = produtoObject.objectEntryId?c /]
+[#elseif configuration.produto?? && configuration.produto.classPK??]
+	[#assign produtoId = configuration.produto.classPK /]
+[/#if]
+
+[#assign produto = {} /]
+
+[#if produtoId?has_content]
+	[#assign produto = tmFetch("/c/tmprodutos/" + produtoId + "?nestedFields=r_tmProdutoImagem_l_cmsBasicDocument&nestedFieldsDepth=1") /]
+[/#if]
+
+[#if !produto.title??]
+	[#if layoutMode == "edit"]
+		<div class="tm-empty">Tokio - Produto: Chamada para Contratação: selecione um Produto de Seguro na configuração do fragmento.</div>
+	[/#if]
+[#else]
+	[#assign atendimento = tmFetch("/c/tmblocos/scopes/Marketing/by-external-reference-code/TM_BLOCO_ATENDIMENTO?nestedFields=tmBlocoItens") /]
+
+	<section class="tm-produto-cta">
+		<div class="tm-container">
+			<div class="tm-produto-cta__box">
+				<div class="tm-produto-cta__main">
+					<h2 class="tm-produto-cta__title">Pronto para simular o seu ${produto.title?html}?</h2>
+
+					<p class="tm-produto-cta__text">${configuration.texto?html}</p>
+
+					[#if produto.linkBotao?has_content]
+						<a class="tm-btn tm-btn--gold" href="${produto.linkBotao?html}" rel="noopener" target="_blank">${(produto.textoBotao!"Contrate online")?html}</a>
+					[/#if]
+				</div>
+
+				[#if atendimento.title??]
+					<div class="tm-produto-cta__help">
+						<p class="tm-produto-cta__help-title">${(atendimento.texto!"")?html}</p>
+
+						[#list atendimento.tmBlocoItens![] as canal]
+							[#assign partes = canal.texto?split("|") /]
+
+							<a class="tm-btn tm-btn--light" href="${(partes[1]!"#")?trim?html}" rel="noopener" target="_blank">${partes[0]?trim?html}</a>
+						[/#list]
+					</div>
+				[/#if]
+			</div>
+		</div>
+	</section>
+[/#if]

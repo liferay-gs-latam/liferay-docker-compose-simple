@@ -1,0 +1,95 @@
+{
+	"pageElement": {
+		"pageElements": [
+			{
+				"definition": {
+					"fragment": {
+						"key": "tm-produto-hero"
+					}
+				},
+				"type": "Fragment"
+			},
+			{
+				"definition": {
+					"fragment": {
+						"key": "tm-produto-secoes"
+					}
+				},
+				"type": "Fragment"
+			},
+			{
+				"definition": {
+					"fragment": {
+						"key": "tm-produto-tabelas"
+					}
+				},
+				"type": "Fragment"
+			},
+			{
+				"definition": {
+					"fragment": {
+						"key": "tm-produto-comparador"
+					}
+				},
+				"type": "Fragment"
+			},
+			{
+				"definition": {
+					"fragment": {
+						"key": "tm-produto-faq"
+					}
+				},
+				"type": "Fragment"
+			},
+			{
+				"definition": {
+					"fragment": {
+						"key": "tm-produto-cta"
+					}
+				},
+				"type": "Fragment"
+			},
+			{
+				"definition": {
+					"fragment": {
+						"key": "tm-produto-relacionados"
+					}
+				},
+				"type": "Fragment"
+			},
+			{
+				"definition": {
+					"fragment": {
+						"key": "tm-bloco"
+					},
+					"fragmentConfig": {
+						"bloco": {
+							"className": "com.liferay.object.model.ObjectDefinition#H8R2",
+							"classPK": "55733",
+							"title": "Comprometidos com um futuro mais seguro."
+						},
+						"estilo": "banner"
+					}
+				},
+				"type": "Fragment"
+			},
+			{
+				"definition": {
+					"fragment": {
+						"key": "tm-produto-aviso"
+					}
+				},
+				"type": "Fragment"
+			}
+		],
+		"type": "Root"
+	},
+	"settings": {
+		"colorSchemeName": "01",
+		"masterPage": {
+			"key": "tokio-marine"
+		},
+		"themeName": "Classic"
+	},
+	"version": 1.1
+}

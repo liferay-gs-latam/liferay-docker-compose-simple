@@ -1,0 +1,73 @@
+[#assign siteURL = themeDisplay.getPathFriendlyURLPublic() + themeDisplay.getScopeGroup().getFriendlyURL() /]
+
+[#function tmFetch path]
+	[#attempt]
+		[#local response = restClient.get(path) /]
+
+		[#if response?is_string]
+			[#local response = response?eval_json /]
+		[/#if]
+
+		[#return response /]
+	[#recover]
+		[#return {} /]
+	[/#attempt]
+[/#function]
+
+[#function tmImage document]
+	[#if document?? && document?is_hash && document.file?? && document.file.fileURL??]
+		[#return document.file.fileURL?keep_before("&imageThumbnail") /]
+	[/#if]
+
+	[#return "" /]
+[/#function]
+
+[#assign bloco = {} /]
+
+[#if configuration.bloco?? && configuration.bloco.classPK??]
+	[#assign bloco = tmFetch("/c/tmblocos/" + configuration.bloco.classPK + "?nestedFields=tmBlocoItens,r_tmBlocoImagem_l_cmsBasicDocument") /]
+[/#if]
+
+[#if !bloco.title??]
+	[#if layoutMode == "edit"]
+		<div class="tm-empty">Selecione um Bloco de Conteúdo na configuração do fragmento.</div>
+	[/#if]
+[#else]
+	[#assign imagem = tmImage(bloco.r_tmBlocoImagem_l_cmsBasicDocument!) /]
+
+	<section class="tm-bloco tm-bloco--${configuration.estilo}">
+		[#if imagem?has_content]
+			<img alt="" class="tm-bloco__background" src="${imagem}" />
+		[/#if]
+
+		<div class="tm-container tm-bloco__container">
+			<div class="tm-bloco__content">
+				[#if bloco.tag?has_content]
+					<span class="tm-tag tm-bloco__tag">${bloco.tag?html}</span>
+				[/#if]
+
+				[#if configuration.estilo == "hero"]
+					<h1 class="tm-bloco__title">${bloco.title?html}</h1>
+				[#else]
+					<h2 class="tm-bloco__title">${bloco.title?html}</h2>
+				[/#if]
+
+				[#if bloco.texto?has_content]
+					<p class="tm-bloco__text">${bloco.texto?html}</p>
+				[/#if]
+
+				[#if bloco.linkBotao?has_content && bloco.textoBotao?has_content]
+					<a class="tm-btn tm-btn--gold" href="${bloco.linkBotao?html}">${bloco.textoBotao?html}</a>
+				[/#if]
+			</div>
+
+			[#if (bloco.tmBlocoItens![])?has_content]
+				<ul class="tm-bloco__items">
+					[#list bloco.tmBlocoItens as item]
+						<li>${item.texto?keep_before("|")?html}</li>
+					[/#list]
+				</ul>
+			[/#if]
+		</div>
+	</section>
+[/#if]

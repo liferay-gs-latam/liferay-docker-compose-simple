@@ -15,3 +15,4 @@ docker-compose/liferay-files/deploy/*.xml
 liferay-sources
 
 claude/
+__pycache__/

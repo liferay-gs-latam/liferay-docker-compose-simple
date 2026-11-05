@@ -1,0 +1,9 @@
+{
+	"configurationPath": "configuration.json",
+	"cssPath": "index.css",
+	"fragmentEntryKey": "tm-produto-comparador",
+	"htmlPath": "index.html",
+	"icon": "compare",
+	"name": "Tokio - Produto: Comparador da Categoria",
+	"type": "component"
+}

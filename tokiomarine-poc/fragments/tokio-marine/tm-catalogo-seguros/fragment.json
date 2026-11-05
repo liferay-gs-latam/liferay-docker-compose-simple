@@ -1,0 +1,10 @@
+{
+	"configurationPath": "configuration.json",
+	"cssPath": "index.css",
+	"fragmentEntryKey": "tm-catalogo-seguros",
+	"htmlPath": "index.html",
+	"icon": "catalog",
+	"jsPath": "index.js",
+	"name": "Tokio - Catálogo de Seguros",
+	"type": "component"
+}

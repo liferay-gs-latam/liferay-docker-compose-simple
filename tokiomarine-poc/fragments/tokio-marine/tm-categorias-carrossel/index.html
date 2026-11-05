@@ -1,0 +1,69 @@
+[#assign siteURL = themeDisplay.getPathFriendlyURLPublic() + themeDisplay.getScopeGroup().getFriendlyURL() /]
+
+[#function tmFetch path]
+	[#attempt]
+		[#local response = restClient.get(path) /]
+
+		[#if response?is_string]
+			[#local response = response?eval_json /]
+		[/#if]
+
+		[#return response /]
+	[#recover]
+		[#return {} /]
+	[/#attempt]
+[/#function]
+
+[#function tmImage document]
+	[#if document?? && document?is_hash && document.file?? && document.file.fileURL??]
+		[#return document.file.fileURL?keep_before("&imageThumbnail") /]
+	[/#if]
+
+	[#return "" /]
+[/#function]
+
+[#assign bloco = {} /]
+
+[#if configuration.bloco?? && configuration.bloco.classPK??]
+	[#assign bloco = tmFetch("/c/tmblocos/" + configuration.bloco.classPK) /]
+[/#if]
+
+[#assign categorias = (tmFetch("/c/tmcategorias/scopes/Marketing?pageSize=50&nestedFields=r_tmCategoriaImagem_l_cmsBasicDocument,tmCategoriaProdutos").items![])?sort_by("ordem") /]
+
+<section class="tm-section tm-categorias-carrossel">
+	<div class="tm-container">
+		<div class="tm-categorias-carrossel__header">
+			<div class="tm-section__header">
+				<h2 class="tm-section__title">${(bloco.title!"Nossos seguros")?html}</h2>
+
+				[#if bloco.texto?has_content]
+					<p class="tm-section__subtitle">${bloco.texto?html}</p>
+				[/#if]
+			</div>
+
+			[#if bloco.linkBotao?has_content]
+				<a class="tm-btn tm-btn--secondary" href="${bloco.linkBotao?html}">${(bloco.textoBotao!"Ver todos")?html}</a>
+			[/#if]
+		</div>
+
+		<div class="tm-categorias-carrossel__track">
+			[#list categorias as categoria]
+				[#assign imagem = tmImage(categoria.r_tmCategoriaImagem_l_cmsBasicDocument!) /]
+
+				<a class="tm-categorias-carrossel__card" href="${siteURL}/categoria/marketing/${categoria.friendlyUrlPath}">
+					[#if imagem?has_content]
+						<img alt="" class="tm-categorias-carrossel__image" loading="lazy" src="${imagem}" />
+					[/#if]
+
+					<div class="tm-categorias-carrossel__body">
+						<h3 class="tm-card__title">${categoria.title?html}</h3>
+
+						<p class="tm-card__text">${(categoria.descricaoCurta!"")?html}</p>
+
+						<span class="tm-categorias-carrossel__count">${(categoria.tmCategoriaProdutos![])?size} produtos ›</span>
+					</div>
+				</a>
+			[/#list]
+		</div>
+	</div>
+</section>

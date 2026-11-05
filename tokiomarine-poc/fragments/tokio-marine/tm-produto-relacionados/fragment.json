@@ -1,0 +1,9 @@
+{
+	"configurationPath": "configuration.json",
+	"cssPath": "index.css",
+	"fragmentEntryKey": "tm-produto-relacionados",
+	"htmlPath": "index.html",
+	"icon": "link",
+	"name": "Tokio - Produto: Produtos Relacionados",
+	"type": "component"
+}

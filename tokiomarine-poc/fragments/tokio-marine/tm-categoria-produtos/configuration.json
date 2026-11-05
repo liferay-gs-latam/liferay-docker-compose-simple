@@ -1,0 +1,17 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"description": "Preenchido automaticamente na página de exibição da categoria.",
+					"label": "Categoria",
+					"name": "categoria",
+					"type": "itemSelector",
+					"typeOptions": {
+						"itemType": "com.liferay.object.model.ObjectDefinition#M1H3"
+					}
+				}
+			]
+		}
+	]
+}

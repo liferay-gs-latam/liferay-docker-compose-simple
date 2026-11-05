@@ -1,0 +1,45 @@
+{
+	"fieldSets": [
+		{
+			"label": "Links externos",
+			"fields": [
+				{
+					"defaultValue": "https://apps.apple.com/br/app/tokio-marine-seguradora/id1449446306",
+					"label": "App Store",
+					"name": "appStore",
+					"type": "text"
+				},
+				{
+					"defaultValue": "https://play.google.com/store/apps/details?id=br.com.tokiomarine.superapp",
+					"label": "Google Play",
+					"name": "googlePlay",
+					"type": "text"
+				},
+				{
+					"defaultValue": "https://www.instagram.com/tokiomarineseguradora",
+					"label": "Instagram",
+					"name": "instagram",
+					"type": "text"
+				},
+				{
+					"defaultValue": "https://www.youtube.com/user/TokioMarineBrasil",
+					"label": "YouTube",
+					"name": "youtube",
+					"type": "text"
+				},
+				{
+					"defaultValue": "https://www.facebook.com/TokioMarineSeguradora",
+					"label": "Facebook",
+					"name": "facebook",
+					"type": "text"
+				},
+				{
+					"defaultValue": "https://www.linkedin.com/company/tokio-marine-seguradora",
+					"label": "LinkedIn",
+					"name": "linkedin",
+					"type": "text"
+				}
+			]
+		}
+	]
+}

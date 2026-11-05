@@ -1,0 +1,14 @@
+{
+	"fieldSets": [
+		{
+			"fields": [
+				{
+					"defaultValue": "https://www.tokiomarine.com.br/cotacoes",
+					"label": "Link do botão Quero contratar",
+					"name": "linkContratar",
+					"type": "text"
+				}
+			]
+		}
+	]
+}

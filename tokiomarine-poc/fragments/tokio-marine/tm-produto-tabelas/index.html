@@ -1,0 +1,101 @@
+[#assign siteURL = themeDisplay.getPathFriendlyURLPublic() + themeDisplay.getScopeGroup().getFriendlyURL() /]
+
+[#function tmFetch path]
+	[#attempt]
+		[#local response = restClient.get(path) /]
+
+		[#if response?is_string]
+			[#local response = response?eval_json /]
+		[/#if]
+
+		[#return response /]
+	[#recover]
+		[#return {} /]
+	[/#attempt]
+[/#function]
+
+[#function tmImage document]
+	[#if document?? && document?is_hash && document.file?? && document.file.fileURL??]
+		[#return document.file.fileURL?keep_before("&imageThumbnail") /]
+	[/#if]
+
+	[#return "" /]
+[/#function]
+
+[#assign produtoId = "" /]
+
+[#if produtoObject??]
+	[#assign produtoId = produtoObject.objectEntryId?c /]
+[#elseif configuration.produto?? && configuration.produto.classPK??]
+	[#assign produtoId = configuration.produto.classPK /]
+[/#if]
+
+[#assign produto = {} /]
+
+[#if produtoId?has_content]
+	[#assign produto = tmFetch("/c/tmprodutos/" + produtoId + "?nestedFields=tmProdutoTabelas,tmTabelaLinhas&nestedFieldsDepth=2") /]
+[/#if]
+
+[#if !produto.title??]
+	[#if layoutMode == "edit"]
+		<div class="tm-empty">Tokio - Produto: Tabelas de Planos: selecione um Produto de Seguro na configuração do fragmento.</div>
+	[/#if]
+[#else]
+	[#list produto.tmProdutoTabelas![] as tabela]
+		[#assign planos = tabela.planos?split("|")?map(plano -> plano?trim)?filter(plano -> plano?has_content) /]
+
+		<section class="tm-section tm-produto-tabelas">
+			<div class="tm-container">
+				<div class="tm-section__header">
+					[#if tabela.tag?has_content]
+						<span class="tm-tag">${tabela.tag?html}</span>
+					[/#if]
+
+					<h2 class="tm-section__title">${tabela.titulo?html}</h2>
+
+					[#if tabela.subtitulo?has_content]
+						<p class="tm-section__subtitle">${tabela.subtitulo?html}</p>
+					[/#if]
+				</div>
+
+				<div class="tm-produto-tabelas__wrapper">
+					<table class="tm-produto-tabelas__table">
+						<thead>
+							<tr>
+								<th scope="col">Serviço</th>
+
+								[#list planos as plano]
+									<th scope="col">${plano?html}</th>
+								[/#list]
+							</tr>
+						</thead>
+
+						<tbody>
+							[#list tabela.tmTabelaLinhas![] as linha]
+								[#assign incluidos = (linha.incluidoEm!"")?split("|")?map(plano -> plano?trim) /]
+
+								<tr>
+									<th scope="row">${linha.servico?html}</th>
+
+									[#list planos as plano]
+										<td>
+											[#if incluidos?seq_contains(plano) || incluidos?seq_contains("*")]
+												<span aria-label="Incluído" class="tm-produto-tabelas__yes">✓</span>
+											[#else]
+												<span aria-label="Não incluído" class="tm-produto-tabelas__no">✕</span>
+											[/#if]
+										</td>
+									[/#list]
+								</tr>
+							[/#list]
+						</tbody>
+					</table>
+				</div>
+
+				[#if tabela.nota?has_content]
+					<p class="tm-produto-tabelas__note">${tabela.nota?html}</p>
+				[/#if]
+			</div>
+		</section>
+	[/#list]
+[/#if]

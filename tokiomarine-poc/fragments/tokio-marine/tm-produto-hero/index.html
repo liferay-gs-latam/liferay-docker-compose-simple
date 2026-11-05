@@ -1,0 +1,92 @@
+[#assign siteURL = themeDisplay.getPathFriendlyURLPublic() + themeDisplay.getScopeGroup().getFriendlyURL() /]
+
+[#function tmFetch path]
+	[#attempt]
+		[#local response = restClient.get(path) /]
+
+		[#if response?is_string]
+			[#local response = response?eval_json /]
+		[/#if]
+
+		[#return response /]
+	[#recover]
+		[#return {} /]
+	[/#attempt]
+[/#function]
+
+[#function tmImage document]
+	[#if document?? && document?is_hash && document.file?? && document.file.fileURL??]
+		[#return document.file.fileURL?keep_before("&imageThumbnail") /]
+	[/#if]
+
+	[#return "" /]
+[/#function]
+
+[#assign produtoId = "" /]
+
+[#if produtoObject??]
+	[#assign produtoId = produtoObject.objectEntryId?c /]
+[#elseif configuration.produto?? && configuration.produto.classPK??]
+	[#assign produtoId = configuration.produto.classPK /]
+[/#if]
+
+[#assign produto = {} /]
+
+[#if produtoId?has_content]
+	[#assign produto = tmFetch("/c/tmprodutos/" + produtoId + "?nestedFields=r_tmProdutoImagem_l_cmsBasicDocument,r_tmCategoriaProdutos_c_tmCategoria") /]
+[/#if]
+
+[#if !produto.title??]
+	[#if layoutMode == "edit"]
+		<div class="tm-empty">Selecione um Produto de Seguro na configuração do fragmento.</div>
+	[/#if]
+[#else]
+	[#assign categoria = produto.r_tmCategoriaProdutos_c_tmCategoria! /]
+	[#assign imagem = tmImage(produto.r_tmProdutoImagem_l_cmsBasicDocument!) /]
+
+	<section class="tm-produto-hero">
+		<div class="tm-container">
+			<nav aria-label="Breadcrumb" class="tm-produto-hero__breadcrumb">
+				<a href="${siteURL}">Início</a>
+				<span aria-hidden="true">›</span>
+				<a href="${siteURL}/seguros">Seguros</a>
+
+				[#if categoria?has_content && categoria.title??]
+					<span aria-hidden="true">›</span>
+					<a href="${siteURL}/categoria/marketing/${categoria.friendlyUrlPath}">${categoria.title?html}</a>
+				[/#if]
+
+				<span aria-hidden="true">›</span>
+				<span aria-current="page">${produto.title?html}</span>
+			</nav>
+
+			<div class="tm-produto-hero__grid">
+				<div class="tm-produto-hero__content">
+					[#if produto.rotulo?has_content]
+						<p class="tm-produto-hero__eyebrow">${produto.rotulo?html}</p>
+					[/#if]
+
+					<h1 class="tm-produto-hero__title">${produto.title?html}</h1>
+
+					[#if produto.subtitulo?has_content]
+						<p class="tm-produto-hero__subtitle">${produto.subtitulo?html}</p>
+					[/#if]
+
+					<div class="tm-produto-hero__actions">
+						[#if produto.linkBotao?has_content]
+							<a class="tm-btn tm-btn--primary" href="${produto.linkBotao?html}" rel="noopener" target="_blank">${(produto.textoBotao!"Contrate online")?html}</a>
+						[/#if]
+
+						<a class="tm-btn tm-btn--secondary" href="#perguntas-frequentes">Tire suas dúvidas</a>
+					</div>
+				</div>
+
+				[#if imagem?has_content]
+					<div class="tm-produto-hero__media">
+						<img alt="${produto.title?html}" class="tm-produto-hero__image" src="${imagem}" />
+					</div>
+				[/#if]
+			</div>
+		</div>
+	</section>
+[/#if]

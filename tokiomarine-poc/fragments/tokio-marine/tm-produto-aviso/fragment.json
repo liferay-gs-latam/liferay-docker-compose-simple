@@ -1,0 +1,9 @@
+{
+	"configurationPath": "configuration.json",
+	"cssPath": "index.css",
+	"fragmentEntryKey": "tm-produto-aviso",
+	"htmlPath": "index.html",
+	"icon": "info-circle",
+	"name": "Tokio - Produto: Aviso Legal",
+	"type": "component"
+}
