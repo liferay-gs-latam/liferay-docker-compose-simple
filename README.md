@@ -6,6 +6,14 @@ Liferay DXP 7.4 running on docker compose.
 
 * Docker and Docker Compose (CE edition) - version 24.0.2
 
+## Data
+
+Get the Document Library and database dump from this folder: https://drive.google.com/drive/folders/1A6N8oFI1KvLJPyxo_St5g3T49ZyDJzfX?usp=drive_link
+
+Extract the document_library contents into the folder `liferay-document-library`.
+
+Extact the database dump into the folder `docker-compose/database-dump/`.
+
 ## Start the environment
 
 There is an issue when start liferay at the same time as search, so start one by one:
