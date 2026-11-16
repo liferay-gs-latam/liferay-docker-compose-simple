@@ -8,8 +8,13 @@ Liferay DXP 7.4 running on docker compose.
 
 ## Start the environment
 
+There is an issue when start liferay at the same time as search, so start one by one:
+
 ```
-docker compose up --build -d
+docker compose build
+docker compose up -d database
+docker compose up -d search
+docker compose up -d
 ```
 
 ## Get logs:
@@ -20,9 +25,18 @@ docker compose logs -f liferay
 
 ## Access
 
-Access http://localhost:8080/ and login with [USER] and [PASSWORD]
+Edit your /etc/hosts:
 
-## DUMP
+```
+127.0.0.1 dev.tokiomarine inst01.tokiomarine inst02.tokiomarine inst03.tokiomarine
+```
+
+Access http://localhost:8080/ and login with test@liferay.com
+Access http://dev.tokiomarine:8080/ and login with test@liferay.com
+
+## DUMPs
+
+Keep the dump updated
 
 ```
 docker compose exec database rm -rf /docker-entrypoint-initdb.d/database.sql
