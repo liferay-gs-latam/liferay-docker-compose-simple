@@ -40,6 +40,7 @@ Edit your /etc/hosts:
 ```
 
 Access http://localhost:8080/ and login with test@liferay.com
+
 Access http://dev.tokiomarine:8080/ and login with test@liferay.com
 
 ## DUMPs
